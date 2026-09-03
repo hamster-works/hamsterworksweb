@@ -1,9 +1,18 @@
-export type Language = 'ja' | 'en' | 'fr'
+export type Language = 'ja' | 'en' | 'fr' | 'de' | 'es' | 'it' | 'pt' | 'ko' | 'zh' | 'tw' | 'ru' | 'nl'
 
 export const languages: Record<Language, string> = {
   ja: '日本語',
   en: 'English',
   fr: 'Français',
+  de: 'Deutsch',
+  es: 'Español',
+  it: 'Italiano',
+  pt: 'Português',
+  ko: '한국어',
+  zh: '简体中文',
+  tw: '繁體中文',
+  ru: 'Русский',
+  nl: 'Nederlands',
 }
 
 const supportedLanguages = Object.keys(languages) as Language[]
@@ -64,7 +73,7 @@ type Copy = {
   disclaimerTitle: string
 }
 
-export const copy: Record<Language, Copy> = {
+export const copy: Partial<Record<Language, Copy>> = {
   ja: {
     navAbout: '会社紹介', navProducts: '製品', navContact: 'お問い合わせ', homeEyebrow: 'SOFTWARE FOR EVERYDAY LIFE', homeTitleBefore: 'あなたに寄り添う、', homeTitleEmphasis: 'ちょうどいい', homeTitleAfter: 'をつくってます。', homeDescription: 'Hamster Works は、毎日の中の「あと少し」を見つけてはやっつけるために走り続けます。', viewProducts: '製品を見る', aboutIndex: '01 / ABOUT', aboutTitle: 'ちょっとしたことに<br>取り組もう。', aboutDescription: '日々の中で何度も使うものを、わかりやすく、楽ちんに。Hamster Worksは生活に寄り添う小さな幸せを育みます。', productsEyebrow: 'OUR PRODUCTS', productsTitle: '毎日をちょっとだけ<br>プラス。', contactEyebrow: 'GET IN TOUCH', contactTitle: 'お問い合わせはこちらから。', contactButton: 'お問い合わせフォーム', footerDescription: '毎日をちょっとだけプラス。', backToProducts: '← 製品一覧へ戻る', productEyebrow: 'PRODUCT', featuresEyebrow: 'FEATURES', featuresTitle: 'の機能と特徴', supportEyebrow: 'SUPPORT', supportTitle: 'サポート', feedbackButton: 'フィードバックフォーム ↗', privacyEyebrow: 'PRIVACY POLICY', privacyTitle: 'プライバシー<br>ポリシー', questionsEyebrow: 'QUESTIONS?', productContactTitle: '製品についての<br>お問い合わせはこちらから。', formButton: 'フォームを開く', disclaimerTitle: '免責事項',
   },
@@ -76,9 +85,24 @@ export const copy: Record<Language, Copy> = {
   },
 }
 
-export const getCopy = (language: Language) => copy[language]
+export const getCopy = (language: Language) => copy[language] ?? copy.en!
 
-export const productCopy: Record<Language, Record<string, { name: string; label: string; description: string }>> = {
+export const driverInstallText: Record<Language, string> = {
+  ja: 'ご利用のPCへのドライバアプリ(eXTDDriver)のインストールが必要（{link}）',
+  en: 'Install the driver app (eXTDDriver) for your PC ({link}).',
+  fr: 'Installez l’application pilote eXTDDriver pour votre PC ({link}).',
+  de: 'Installieren Sie die Treiber-App (eXTDDriver) für Ihren PC ({link}).',
+  es: 'Instala la aplicación del controlador (eXTDDriver) para tu PC ({link}).',
+  it: 'Installa l’app driver (eXTDDriver) per il tuo PC ({link}).',
+  pt: 'Instale o aplicativo de driver (eXTDDriver) para o seu PC ({link}).',
+  ko: 'PC용 드라이버 앱(eXTDDriver)을 설치해야 합니다({link}).',
+  zh: '需要为您的 PC 安装驱动应用（eXTDDriver）（{link}）。',
+  tw: '需要為您的 PC 安裝驅動程式應用程式（eXTDDriver）（{link}）。',
+  ru: 'Установите приложение-драйвер (eXTDDriver) для ПК ({link}).',
+  nl: 'Installeer de driverapp (eXTDDriver) voor uw pc ({link}).',
+}
+
+export const productCopy: Partial<Record<Language, Record<string, { name: string; label: string; description: string }>>> = {
   ja: {
     'expiry-date-manager': { name: 'Expiry Date Manager', label: '食品ロスを減らしたい方に最適な「賞味期限管理」アプリ。', description: 'バーコードを読み取って商品を登録、賞味期限が近づいたらプッシュ通知でお知らせ。音声での日付登録は意外に便利。キッチンでお手軽簡単に登録！' },
     'external-touch-display': { name: 'eXternalTouchDisplay', label: 'タブレット/スマートフォンをPCのタッチ対応サブディスプレイに。', description: 'デスクトップを広く使いたいとき、プレゼン中に手元で操作したいとき、サブモニターをすぐに追加したいときに活用できます。Wi-Fiで接続し、タブレットから直接タッチ操作できます。' },
@@ -98,7 +122,7 @@ export const productCopy: Record<Language, Record<string, { name: string; label:
 
 type ProductDetails = { features: string[]; privacy: string; support?: string; disclaimer?: string }
 
-export const productDetails: Record<Language, Record<string, ProductDetails>> = {
+export const productDetails: Partial<Record<Language, Record<string, ProductDetails>>> = {
   ja: {
     'expiry-date-manager': { features: ['バーコードを読み取って登録', '音声入力で日付を素早く入力', '賞味期限が近づいたらプッシュ通知', 'バックアップ対応', 'こんな方におすすめ！'], privacy: 'プライバシーポリシー本文を Google Site の掲載内容に置き換えてください。' },
     'external-touch-display': { features: ['機能概要', '用途', '特徴', 'システム要件'], privacy: 'プライバシーポリシー本文を Google Site の掲載内容に置き換えてください。', support: 'フィードバック\n\nアプリに関するコメントは下記のフォームよりお送りください。\n\nよくある質問\n\nQ. PCのレシーバアプリに接続/再接続できない、または見つからない\nA. 同じネットワーク上のPC上でドライバアプリ(eXTDDriver)が起動していることを確認してください。\nA. レシーバアプリ（タスクトレイのアプリ）を再起動してください。\nA. 常駐しているセキュリティソフトに除外されている場合はセキュリティソフトに登録してください。\nA. ルーターの設定などをご確認ください。' },

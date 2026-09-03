@@ -1,5 +1,6 @@
 import './style.css'
-import { getCopy, getLanguage, languages, productCopy, productDetails, setLanguage, type Language } from './i18n'
+import { driverInstallText, getCopy, getLanguage, languages, productCopy, productDetails, setLanguage, type Language } from './i18n'
+import { extraCopy, extraProductCopy, extraProductDetails, extraSystemRequirements } from './i18n-extra'
 
 type Product = {
   slug: string
@@ -48,7 +49,7 @@ const products: Product[] = [
     accent: 'coral',
     features: ['機能概要\n■ iOSやAndroidのタブレットやスマートフォンをPCの外部ディスプレイとして活用\n■ デスクトップを拡張・複製表示\n■ タブレットから直接タッチ操作が可能\n■ フルスクリーン表示・画面回転にも対応', '用途\n■ 会議、プレゼン、作業用モニター、操作パネルに最適', '特徴\n■ レシーバーを自動検出して簡単接続\n■ 最大8台のタブレット接続に対応*\n■ Wi-Fi接続に対応\n■ WebRTCによる低遅延の映像ストリーミング\n■ 日本語・英語を含む多言語UI\n■ 広告なし（アプリ内課金・サブスクリプションあり）\n\n*お客様のハードウエア環境に依存します', 'システム要件\n1. ご利用のPCへのドライバアプリ(eXTDDriver)のインストールが必要（Windows Store）\n2. モバイル/タブレットアプリのダウンロードは、AppStore / Google Play から'],
     privacy: '最終更新日：2026年4月16日\n\n収集する情報\n本アプリは、ユーザーの個人情報を収集・外部送信しません。\n\nデータの保存場所\n登録した賞味期限・品目名・画像はすべて、お使いの端末内およびユーザー自身のiCloudにのみ保存されます。開発者がこれらのデータにアクセスすることはありません。\n\n外部サービスとの通信\nバーコードをスキャンした際、読み取ったバーコード番号をOpen Food Facts API（https://world.openfoodfacts.org/）へ送信し、商品名・商品画像を取得します。バーコード番号以外の情報は送信しません。\n\nプッシュ通知\n本アプリのプッシュ通知は端末内のローカル通知です。外部サーバーへの送信は行いません。\n\n広告・解析・クラッシュレポート\n本アプリは広告SDK・解析SDK・クラッシュレポートSDKを使用していません。\n\nプライバシーポリシーの変更\n本ポリシーは予告なく変更される場合があります。変更後は本ページに掲載します。\n\nお問い合わせ\n本ポリシーに関するご質問はサポートページよりお送りください。',
-    links: '<a href="https://docs.google.com/forms/d/e/1FAIpQLSdREUn4WAHsOkJZU5v8CdbB73mw2sM1PrGve_G1zJGemYmaOQ/viewform" target="_blank" rel="noreferrer">フィードバックフォーム ↗</a>',
+    links: '<button type="button" disabled>App Store</button><button type="button" disabled>Google Play</button>',
     formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdREUn4WAHsOkJZU5v8CdbB73mw2sM1PrGve_G1zJGemYmaOQ/viewform',
     support: 'フィードバック\n\nアプリに関するコメントは下記のフォームよりお送りください。\n\nよくある質問\n\nQ.  フルスクリーンの終了方法がわからない。\nA.  Androidは画面下部を下から上にスワイプするなどしてナビゲーションバーを表示させ、戻るボタンをタップ。iOSは画面下部を３～４秒間タップし続けて表示される戻るボタンをタップ。\n\nQ. 複数の端末で、うまく仮想デスクトップが構成できない。\nA.  端末側のアプリを一斉に起動すると時々混乱することがあります。順番に起動してみてください。\n\nQ,  PCのレシーバアプリに接続/再接続できない、または見つからない\nA.  同じネットワーク上のPC上でドライバアプリ(eXTDDriver)が起動していることを確認してください。\nA.  レシーバアプリ（タスクトレイのアプリ）を再起動してください。\nA.  常駐しているセキュリティソフトに除外されている場合はセキュリティソフトに登録してください。\nA.  ルーターの設定などをご確認ください。\n\nQ. 機種変更をしたらライセンスがなくなりました\nA. このアプリの設定から「ライセンス」にある「購入またはライセンスの復元」で復元できます。',
     disclaimer: '本アプリの機能・仕様・提供は予告なく変更または終了する場合があります。本アプリの使用により生じたいかなる損害（仕様や品質、および動作の不備に起因する損害を含み、それらに限らない）についても、開発者は一切の責任を負いません。',
@@ -67,12 +68,26 @@ const products: Product[] = [
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 let currentLanguage = getLanguage()
-let currentCopy = getCopy(currentLanguage)
+const getLocalizedCopy = (language: Language) => ({ ...getCopy(language), ...extraCopy[language] })
+let currentCopy = getLocalizedCopy(currentLanguage)
 
 const localizedProduct = (product: Product) => {
-  if (currentLanguage === 'ja') return product
-  const localized = { ...product, ...productCopy[currentLanguage][product.slug], ...productDetails[currentLanguage][product.slug] }
-  if (product.slug === 'external-touch-display') localized.links = `<a href="${CONTACT_FORM_URL}" target="_blank" rel="noreferrer">${currentCopy.feedbackButton}</a>`
+  const localized = currentLanguage === 'ja'
+    ? { ...product }
+    : { ...product, ...(productCopy[currentLanguage]?.[product.slug] ?? extraProductCopy[currentLanguage]?.[product.slug] ?? productCopy.en?.[product.slug]), ...(productDetails[currentLanguage]?.[product.slug] ?? extraProductDetails[currentLanguage]?.[product.slug] ?? productDetails.en?.[product.slug]) }
+  if (product.slug === 'external-touch-display') {
+    const linkLabels: Record<Language, string> = { ja: 'ダウンロードページ', en: 'download page', fr: 'page de téléchargement', de: 'Downloadseite', es: 'página de descarga', it: 'pagina di download', pt: 'página de download', ko: '다운로드 페이지', zh: '下载页面', tw: '下載頁面', ru: 'странице загрузки', nl: 'downloadpagina' }
+    const downloadLink = `<a href="https://github.com/hamster-works/eXTD" target="_blank" rel="noreferrer">${linkLabels[currentLanguage]}</a>`
+    const featureLines = localized.features[3].split('\n')
+    const systemRequirements = extraSystemRequirements[currentLanguage]
+    if (systemRequirements) {
+      featureLines[0] = systemRequirements[0]
+      featureLines[2] = systemRequirements[1]
+    }
+    featureLines[1] = `1. ${driverInstallText[currentLanguage].replace('{link}', downloadLink)}`
+    localized.features = [...localized.features]
+    localized.features[3] = featureLines.join('\n')
+  }
   return localized
 }
 
@@ -83,7 +98,7 @@ const bindLanguageSelector = () => {
     const language = (event.target as HTMLSelectElement).value as Language
     setLanguage(language)
     currentLanguage = language
-    currentCopy = getCopy(language)
+    currentCopy = getLocalizedCopy(language)
     render()
   })
 }
