@@ -81,10 +81,13 @@ const addDriverDownloadNote = (support: string) => {
   let updated = support.replace(driverPattern, `${driverLabel}※`)
   updated = updated.replace(/(eXTDDriver\s+app)(※)?/gi, '$1※')
   updated = updated.replace(receiverPattern, `${receiverLabel}※`)
-  const receiverAnswerPattern = /((?:A\.|R\.|Réponse\s*:).*?(?:system tray|taskbar|タスクトレイ|barre des tâches|zone de notification|bandeja del sistema|barra delle applicazioni|systeemvak|панели задач|작업 표시줄|工作列|工作栏)[^\n]*)(\n(?:A\.|R\.|Réponse\s*:))/i
-  if (receiverAnswerPattern.test(updated)) return updated.replace(receiverAnswerPattern, `$1\n${note}$2`)
-  const japaneseReceiverAnswer = /(A\.\s*レシーバアプリ※（タスクトレイのアプリ）を再起動してください。)(\nA\.)/i
-  if (japaneseReceiverAnswer.test(updated)) return updated.replace(japaneseReceiverAnswer, `$1\n${note}$2`)
+  const restartTerms = currentLanguage === 'ja' ? ['再起動'] : currentLanguage === 'fr' ? ['Redémarrez'] : ['Restart']
+  const lines = updated.split(/\r?\n/)
+  const restartIndex = lines.findIndex((line) => restartTerms.some((term) => line.includes(term)))
+  if (restartIndex >= 0) {
+    lines.splice(restartIndex + 1, 0, note)
+    return lines.join('\n')
+  }
   return `${updated}\n\n${note}`
 }
 
