@@ -71,13 +71,29 @@ let currentLanguage = getLanguage()
 const getLocalizedCopy = (language: Language) => ({ ...getCopy(language), ...extraCopy[language] })
 let currentCopy = getLocalizedCopy(currentLanguage)
 
+const downloadPageLabels: Record<Language, string> = { ja: 'ダウンロードページ', en: 'download page', fr: 'page de téléchargement', de: 'Downloadseite', es: 'página de descarga', it: 'pagina di download', pt: 'página de download', ko: '다운로드 페이지', zh: '下载页面', tw: '下載頁面', ru: 'странице загрузки', nl: 'downloadpagina' }
+const addDriverDownloadNote = (support: string) => {
+  const driverLabel = currentLanguage === 'ja' ? 'ドライバアプリ' : currentLanguage === 'en' ? 'driver app' : currentLanguage === 'fr' ? 'application pilote' : 'driver app'
+  const receiverLabel = currentLanguage === 'ja' ? 'レシーバアプリ' : currentLanguage === 'en' ? 'receiver app' : currentLanguage === 'fr' ? 'application réceptrice' : 'receiver app'
+  const driverPattern = new RegExp(`${driverLabel}(※)?(?=.?eXTDDriver)`, 'i')
+  const receiverPattern = new RegExp(`${receiverLabel}(※)?`, 'gi')
+  const note = `<span class="support-download-note">※<a class="support-download-link" href="https://github.com/hamster-works/eXTD" target="_blank" rel="noreferrer">${downloadPageLabels[currentLanguage]}</a></span>`
+  let updated = support.replace(driverPattern, `${driverLabel}※`)
+  updated = updated.replace(/(eXTDDriver\s+app)(※)?/gi, '$1※')
+  updated = updated.replace(receiverPattern, `${receiverLabel}※`)
+  const receiverAnswerPattern = /((?:A\.|R\.|Réponse\s*:).*?(?:system tray|taskbar|タスクトレイ|barre des tâches|zone de notification|bandeja del sistema|barra delle applicazioni|systeemvak|панели задач|작업 표시줄|工作列|工作栏)[^\n]*)(\n(?:A\.|R\.|Réponse\s*:))/i
+  if (receiverAnswerPattern.test(updated)) return updated.replace(receiverAnswerPattern, `$1\n${note}$2`)
+  const japaneseReceiverAnswer = /(A\.\s*レシーバアプリ※（タスクトレイのアプリ）を再起動してください。)(\nA\.)/i
+  if (japaneseReceiverAnswer.test(updated)) return updated.replace(japaneseReceiverAnswer, `$1\n${note}$2`)
+  return `${updated}\n\n${note}`
+}
+
 const localizedProduct = (product: Product) => {
   const localized = currentLanguage === 'ja'
     ? { ...product }
     : { ...product, ...(productCopy[currentLanguage]?.[product.slug] ?? extraProductCopy[currentLanguage]?.[product.slug] ?? productCopy.en?.[product.slug]), ...(productDetails[currentLanguage]?.[product.slug] ?? extraProductDetails[currentLanguage]?.[product.slug] ?? productDetails.en?.[product.slug]) }
   if (product.slug === 'external-touch-display') {
-    const linkLabels: Record<Language, string> = { ja: 'ダウンロードページ', en: 'download page', fr: 'page de téléchargement', de: 'Downloadseite', es: 'página de descarga', it: 'pagina di download', pt: 'página de download', ko: '다운로드 페이지', zh: '下载页面', tw: '下載頁面', ru: 'странице загрузки', nl: 'downloadpagina' }
-    const downloadLink = `<a href="https://github.com/hamster-works/eXTD" target="_blank" rel="noreferrer">${linkLabels[currentLanguage]}</a>`
+    const downloadLink = `<a href="https://github.com/hamster-works/eXTD" target="_blank" rel="noreferrer">${downloadPageLabels[currentLanguage]}</a>`
     const featureLines = localized.features[3].split('\n')
     const systemRequirements = extraSystemRequirements[currentLanguage]
     if (systemRequirements) {
@@ -87,6 +103,7 @@ const localizedProduct = (product: Product) => {
     featureLines[1] = `1. ${driverInstallText[currentLanguage].replace('{link}', downloadLink)}`
     localized.features = [...localized.features]
     localized.features[3] = featureLines.join('\n')
+    if (localized.support) localized.support = addDriverDownloadNote(localized.support)
   }
   return localized
 }
