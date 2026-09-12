@@ -11,7 +11,8 @@ html { scroll-behavior:smooth; }
 .support-reference-link { display:inline-block; margin:12px 12px 8px 0; vertical-align:top; }
 .support-reference-link img { display:block; width:min(100%, 420px); height:auto; border:1px solid var(--line); transition:opacity .2s, transform .2s; }
 .support-reference-link:hover img { opacity:.8; transform:translateY(-2px); }
-.support-images { margin-top:-22px; margin-bottom:22px; }
+.support-images { margin-top:-22px; margin-bottom:0; }
+.support-images + p { margin-top:0; }
 .support-images summary { display:inline-block; cursor:pointer; color:var(--coral); text-decoration:underline; text-underline-offset:3px; }
 .support-images summary:hover { color:var(--ink); }
 body { margin:0; min-width:320px; }
