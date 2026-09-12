@@ -146,9 +146,13 @@ function productPage(product: Product) {
   const supportHtml = product.support ? product.support.split('\n\n').map((paragraph) => {
     const headingClass = ['よくある質問', 'モバイル/タブレット', 'Windows PC'].includes(paragraph) ? ' class="support-subheading"' : ''
     const imageLinks = paragraph.match(/<a class="support-reference-link"[\s\S]*?<\/a>/g) ?? []
-    const paragraphText = imageLinks.length === 2 ? paragraph.replace(/<br><a class="support-reference-link"[\s\S]*?<\/a>/g, '') : paragraph
     const imageToggle = imageLinks.length === 2 ? `<details class="support-images"><summary>画像を表示</summary>${imageLinks.join('')}</details>` : ''
-    return imageLinks.length === 2 ? `<p>${paragraphText}</p>${imageToggle}` : `<p${headingClass}>${paragraphText}</p>`
+    if (imageLinks.length === 2) {
+      const imageBlock = /<br><a class="support-reference-link"[\s\S]*?<\/a><br><a class="support-reference-link"[\s\S]*?<\/a>/
+      const [beforeImages, afterImages] = paragraph.split(imageBlock)
+      return `${beforeImages ? `<p>${beforeImages}</p>` : ''}${imageToggle}${afterImages ? `<p>${afterImages}</p>` : ''}`
+    }
+    return `<p${headingClass}>${paragraph}</p>`
   }).join('') : ''
   const disclaimerHtml = product.disclaimer ? `<section class="disclaimer"><p class="eyebrow">DISCLAIMER</p><h2>${currentCopy.disclaimerTitle}</h2><p>${product.disclaimer}</p></section>` : ''
   const formUrl = product.formUrl ?? CONTACT_FORM_URL
