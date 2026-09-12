@@ -145,7 +145,10 @@ function productPage(product: Product) {
   const privacyHtml = product.privacy.split('\n\n').map((paragraph) => `<p>${paragraph}</p>`).join('')
   const supportHtml = product.support ? product.support.split('\n\n').map((paragraph) => {
     const headingClass = ['よくある質問', 'モバイル/タブレット', 'Windows PC'].includes(paragraph) ? ' class="support-subheading"' : ''
-    return `<p${headingClass}>${paragraph}</p>`
+    const imageLinks = paragraph.match(/<a class="support-reference-link"[\s\S]*?<\/a>/g) ?? []
+    const paragraphText = imageLinks.length === 2 ? paragraph.replace(/<br><a class="support-reference-link"[\s\S]*?<\/a>/g, '') : paragraph
+    const imageToggle = imageLinks.length === 2 ? `<details class="support-images"><summary>画像を表示</summary>${imageLinks.join('')}</details>` : ''
+    return imageLinks.length === 2 ? `<p>${paragraphText}</p>${imageToggle}` : `<p${headingClass}>${paragraphText}</p>`
   }).join('') : ''
   const disclaimerHtml = product.disclaimer ? `<section class="disclaimer"><p class="eyebrow">DISCLAIMER</p><h2>${currentCopy.disclaimerTitle}</h2><p>${product.disclaimer}</p></section>` : ''
   const formUrl = product.formUrl ?? CONTACT_FORM_URL
