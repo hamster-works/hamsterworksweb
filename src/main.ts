@@ -106,7 +106,10 @@ const localizedProduct = (product: Product) => {
     featureLines[1] = `1. ${driverInstallText[currentLanguage].replace('{link}', downloadLink)}`
     localized.features = [...localized.features]
     localized.features[3] = featureLines.join('\n')
-    if (localized.support) localized.support = addDriverDownloadNote(localized.support)
+    if (localized.support) {
+      localized.support = addDriverDownloadNote(localized.support)
+      if (currentLanguage === 'ja') localized.support = localized.support.replace('で「MediaMTX」を許可する(Public&Private)必要があります。', 'で「eXTDDriver MediaMTX」「eXTDDriver  Receiver TCP」「eXTDDriver Receiver UDP」をパブリックとプライベートで許可しておく必要があります。')
+    }
   }
   return localized
 }
