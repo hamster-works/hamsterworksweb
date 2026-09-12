@@ -208,12 +208,13 @@ function initGallery() {
 
 function render() {
   document.documentElement.lang = currentLanguage
+  const sectionHash = ['#about', '#products'].includes(window.location.hash)
   const slug = window.location.hash.match(/^#\/product\/(.+)$/)?.[1]
   const product = products.find((item) => item.slug === slug || (slug === 'external-touch-screen' && item.slug === 'external-touch-display'))
   app.innerHTML = product ? productPage(product) : home()
   initGallery()
   bindLanguageSelector()
-  window.scrollTo({ top: 0, behavior: 'instant' })
+  if (!sectionHash) window.scrollTo({ top: 0, behavior: 'instant' })
 }
 
 window.addEventListener('hashchange', render)
