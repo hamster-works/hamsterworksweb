@@ -132,6 +132,358 @@ const externalTouchPrivacy: Record<Language, string> = {
   nl: 'Laatst bijgewerkt: 14 augustus 2026\n\nVerzamelde informatie\nDeze app verzamelt geen persoonlijke informatie van gebruikers en stuurt deze niet buiten de app.\n\nOver logboeken\nDeze app bevat een functie voor het verzamelen van logboeken voor debugdoeleinden. Logboeken kunnen het IP-adres van de gebruiker en de apparaatnaam bevatten. De app verstuurt de verzamelde logboeken echter niet uit zichzelf naar externe partijen.\n\nAdvertenties, analyses en crashrapporten\nDeze app gebruikt geen SDK’s voor advertenties, analyses of crashrapporten.\n\nWijzigingen in dit privacybeleid\nDit beleid kan zonder voorafgaande kennisgeving worden gewijzigd. Wijzigingen worden op deze pagina gepubliceerd.\n\nContact\nGebruik het formulier om vragen over dit beleid te versturen.',
 }
 
+const externalTouchTermsJa = `制定日：2026年09月21日
+最終更新日：2026年09月21日
+事業者：Hamster Works
+
+---
+
+# 第1条（適用）
+
+1. 本利用規約（以下「本規約」といいます。）は、Hamster Works（以下「当方」といいます。）が提供する「eXternalTouchDisplay」アプリケーション（以下「本アプリ」といいます。）および本アプリに関連して当方が提供するサービス、機能、ウェブサイトその他の関連サービス（以下、本アプリと総称して「本サービス」といいます。）の利用条件を定めるものです。
+2. 本規約において「本サービス」とは、本アプリそのものを含み、本アプリに関連して当方が提供するサービス、機能、ウェブサイトその他の関連サービスを意味します。
+3. 利用者は、本規約に同意した上で、本サービスを利用するものとします。
+4. 本規約において「利用者」とは、本サービスを利用するすべての個人または法人をいいます。
+
+---
+
+# 第2条（利用許諾）
+
+1. 当方は、利用者に対し、本規約に従って本サービスを利用するための、非独占的かつ譲渡不能な利用権を許諾します。
+2. 本サービスは利用者に販売されるものではなく、本規約に基づいて利用するためのライセンスが許諾されるものとします。
+3. 利用者は、本規約および適用される法令に従って本サービスを利用するものとします。
+
+---
+
+# 第3条（禁止事項）
+利用者は、本サービスの利用にあたり、以下の行為を行ってはなりません。
+
+1. 本サービスを違法な目的または不正な目的で利用すること。
+2. 本サービスを複製、販売、再配布、貸与、譲渡、サブライセンスその他の方法により第三者に提供すること。ただし、法令または本規約により明示的に認められる場合を除きます。
+3. 本サービスをリバースエンジニアリング、逆コンパイル、逆アセンブルその他の方法により解析または改変すること。ただし、適用される法令により禁止できない場合を除きます。
+4. 本サービスの正常な動作を妨害する行為。
+5. 本サービスまたは当方のシステムに対して、不正なアクセス、過度な負荷その他の攻撃を行うこと。
+6. 当方または第三者の権利、利益または信用を侵害する行為。
+7. その他、当方が不適切と合理的に判断する行為。
+
+---
+
+# 第4条（アップデートおよび仕様変更）
+
+1. 当方は、本サービスの機能追加、変更、改善、修正、セキュリティ対応、技術上の必要その他の理由により、本サービスの仕様を随時変更することがあります。
+2. 本サービスの機能、仕様、内容、デザイン、操作方法、対応する端末、対応するOSおよびOSバージョン、対応する外部機器、通信方式その他の提供条件等は、事前の通知または予告なく、変更、追加、削除または廃止される場合があります。
+3. 当方は、特定の機能または仕様を将来にわたって提供することを保証するものではなく、既存の機能または仕様を変更、削除または廃止することがあります。
+4. 本サービスのアップデートまたは仕様変更により、以前利用できた機能が利用できなくなったり、動作、操作方法または利用環境が変更されたりする場合があります。
+5. 当方は、技術上、運営上、法令上その他の合理的な理由により、本サービスの全部または一部の提供を、事前の通知または予告なく、一時停止、変更または終了することがあります。
+6. 本サービスのアップデート、仕様変更、機能の削除または廃止、提供停止もしくは終了により利用者に生じた損害については、第10条（損害賠償責任の制限）の定めに従うものとします。
+
+---
+
+# 第5条（料金およびサブスクリプション）
+
+1. 本サービスには、有料の機能またはサブスクリプション（自動更新される定期購入を含みます。）が含まれる場合があります。
+2. 有料機能またはサブスクリプションの料金、期間、更新条件その他の購入条件は、購入時に表示される内容、App Store、Google Playその他の販売プラットフォームに表示される条件に従うものとします。
+3. サブスクリプションは、利用者が所定の方法で解約しない限り、自動的に更新される場合があります。
+4. 支払い、請求、更新、解約、返金その他の購入に関する事項については、Apple、Googleその他の販売プラットフォームが定める規約および条件が適用される場合があります。
+5. 利用者がサブスクリプションを解約した場合でも、既に支払われた料金について、適用される法令または販売プラットフォームの返金規定により返金が認められる場合を除き、返金されないことがあります。
+
+---
+
+# 第6条（第三者サービス）
+
+1. 本サービスは、Apple、Google、外部ディスプレイ、USB機器、ネットワーク、クラウドサービスその他の第三者が提供する製品、サービスまたは技術と連携または依存する場合があります。
+2. 第三者の製品、サービス、OS、API、仕様、ネットワークその他の環境の変更、不具合、停止、終了またはその他の事情により、本サービスの全部または一部が利用できなくなる場合があります。
+3. 第三者のサービスについては、それぞれの第三者が定める利用規約、プライバシーポリシーその他の条件が適用されます。
+
+---
+
+# 第7条（知的財産権）
+
+1. 本サービス、本アプリ、名称、ロゴ、デザイン、プログラム、画像、文章その他本サービスを構成する一切のコンテンツに関する著作権その他の知的財産権は、当方または正当な権利を有する第三者に帰属します。
+2. 本規約は、利用者に対して、本サービスに関する知的財産権を譲渡するものではありません。
+3. 本サービスにオープンソースソフトウェアその他第三者のソフトウェアが含まれる場合、当該ソフトウェアについては、それぞれのライセンス条件が適用されます。
+
+---
+
+# 第8条（プライバシーポリシー）
+
+1. 収集する情報
+本アプリは、利用者の個人情報を収集または外部送信しません。ただし、本アプリにはデバッグおよび不具合調査を目的としたログ取得機能が含まれる場合があります。
+
+2. ログについて
+本アプリが取得するデバッグログには、利用環境によって、利用者のIPアドレス、デバイス名その他のデバイスに関する情報が含まれる場合があります。これらのログについて、本アプリが利用者の操作によらず、自発的に外部のサーバーその他の第三者へ送信することはありません。利用者が、自らの意思でログその他の情報を当方に送信した場合、当方は、当該情報を本サービスの提供、不具合調査、問い合わせ対応その他必要な目的のために利用することがあります。当方は、法令に基づく場合を除き、利用者から自発的に提供された情報を第三者に提供または共有しません。
+
+3. 広告・解析・クラッシュレポート
+本アプリは、広告SDK、アクセス解析SDK、利用状況解析SDK、クラッシュレポートSDKその他これらに類する第三者提供のSDKを使用していません。
+
+4. 情報の保存および削除
+本アプリが利用者の端末内に保存するデータについては、利用者自身の端末またはOSの機能・設定等により管理されます。当方が利用者から問い合わせ等を通じて情報を受領した場合、その情報は、問い合わせへの対応、不具合調査その他必要な目的のために必要な期間保持することがあります。不要となった情報については、法令上保存が必要な場合を除き、適切な方法で削除または廃棄するよう努めます。
+
+---
+
+# 第9条（保証の否認および不具合等）
+
+1. 本サービスは、「現状有姿（AS IS）」および「提供可能な状態（AS AVAILABLE）」で提供されます。
+2. 当方は、適用される法令により認められる最大限の範囲において、本サービスについて、以下を含むいかなる保証も行いません。
+1. 本サービスにバグ、エラーその他の不具合が存在しないこと。
+2. 本サービスが常に正常に動作すること。
+3. 本サービスが中断、停止または遅延することなく利用できること。
+4. 本サービスが特定の端末、OS、OSバージョン、外部ディスプレイ、USB機器、ケーブル、ネットワーク、ドライバその他の環境において正常に動作すること。
+5. 本サービスが利用者の特定の目的または期待する結果を満たすこと。
+6. 本サービスによって表示、保存、転送または同期されるデータが常に正確、完全または消失しないこと。
+7. 本サービスの不具合が必ず修正されること。
+3. 本サービスの利用中に、アプリケーションのクラッシュ、フリーズ、予期しない終了、表示の乱れ、接続の失敗、入力の不具合、遅延、データの欠損、データの破損その他の予期しない動作が発生する可能性があります。
+4. OS、端末、外部ディスプレイ、USB機器、ケーブル、ネットワーク、ドライバ、第三者が提供するソフトウェアまたはサービスその他の第三者製品・サービスの仕様変更、不具合、互換性その他の事情により、本サービスが正常に動作しない場合があります。
+5. 当方は、本サービスに不具合その他の問題が発見された場合、修正、アップデートその他の対応を行うことがありますが、これらを行う義務を負うものではありません。
+6. 利用者は、本サービスの利用に際して重要なデータが失われる可能性があることを理解し、必要に応じて、自らの責任においてバックアップその他のデータ保全措置を講じるものとします。
+
+---
+
+# 第10条（損害賠償責任の制限）
+
+1. 適用される法令により認められる最大限の範囲において、当方は、本サービスの利用または利用不能、本サービスの不具合、エラー、バグ、停止、終了、データの消失・破損その他本サービスに関連して生じた、逸失利益、逸失収益、事業機会の喪失、データの喪失、データの破損、業務の中断その他の間接損害、付随的損害、特別損害または結果的損害について責任を負わないものとします。
+2. 利用者と当方との間の契約が消費者契約法その他の強行法規の適用を受ける場合、当該法令により無効となる範囲については、本条の免責または責任制限は適用されないものとします。
+3. 当方の責任について法令上完全な免責または責任制限が認められない場合、当方の責任は、当該法令により認められる最小限の範囲に限定されるものとします。
+4. 本条は、適用される法令により免責または責任制限が認められない責任についてまで、当方を免責することを意図するものではありません。
+
+---
+
+# 第11条（利用者の責任）
+
+1. 利用者は、自らの責任において本サービスを利用するものとします。
+2. 利用者が本サービスを利用したことにより、利用者自身または第三者に損害、損失その他の不利益が生じた場合、利用者は、その利用について必要な確認および対策を自らの責任で行うものとします。
+3. 本サービスを業務、商用環境その他重要な用途で利用する場合、利用者は、本サービスが正常に動作しない場合に備えて、必要な代替手段およびバックアップを用意するものとします。
+
+---
+
+# 第12条（利用停止および終了）
+
+1. 利用者が本規約に違反した場合、当方は、事前の通知なく、当該利用者による本サービスの利用を停止または制限することがあります。
+2. 当方は、技術上、運営上、法令上その他の合理的な理由により、本サービスの全部または一部の提供を停止または終了することがあります。
+3. 本サービスの利用停止または終了により利用者に損害が生じた場合であっても、適用される法令により認められる最大限の範囲において、当方は責任を負わないものとします。
+
+---
+
+# 第13条（本規約の変更）
+
+1. 当方は、必要に応じて本規約を変更することがあります。
+2. 本規約は、法令、サービス内容、技術その他の事情に応じて、事前の通知または予告なく変更される場合があります。
+3. 重要な変更を行う場合、当方は、可能な限り適切な方法により変更内容および変更時期を周知するよう努めます。
+4. 変更後の本規約は、当方が本サービス上または当方が指定するウェブサイト上に掲載した時点から、別途定める場合を除き適用されます。
+
+---
+
+# 第14条（言語）
+
+1. 本規約および本プライバシーポリシーについて、他の言語による翻訳版が提供される場合であっても、日本語版を正文とします。
+2. 日本語版と翻訳版との間に内容または解釈の相違がある場合、日本語版が優先するものとします。
+
+---
+
+# 第15条（第三者の規約）
+
+本サービスをApple App Store、Google Playその他の第三者が提供するプラットフォームを通じて利用する場合、利用者は、当該プラットフォームの利用規約その他の適用される条件にも従うものとします。
+
+---
+
+# 第16条（準拠法および管轄）
+
+1. 本規約は、日本法に準拠して解釈されるものとします。ただし、利用者が居住する国または地域の強行法規により別途定められる場合を除きます。
+2. 本サービスまたは本規約に関して当方と利用者との間で紛争が生じた場合、適用される法令に従い解決するものとします。
+
+---
+
+# 第17条（連絡先）
+
+本サービス、本規約、プライバシーその他に関するお問い合わせは、以下の連絡先までご連絡ください。
+
+メールアドレス：contact@hamster-works.com
+
+---
+
+# 第18条（分離可能性）
+
+本規約のいずれかの条項またはその一部が、適用される法令により無効または執行不能と判断された場合であっても、その他の条項は引き続き有効に存続するものとします。`
+
+const legalTermsHtml = (terms: string) => terms.split('\n\n').map((block) => {
+  if (block === '---') return '<hr>'
+  if (block.startsWith('# ')) return `<h3>${block.slice(2)}</h3>`
+  return `<p>${block.replace(/\n/g, '<br>')}</p>`
+}).join('')
+
+const externalTouchTermsEn = `Established: September 21, 2026
+Last updated: September 21, 2026
+Operator: Hamster Works
+
+---
+
+# Article 1 (Scope)
+
+1. These Terms of Use (the “Terms”) establish the conditions for using the “eXternalTouchDisplay” application (the “App”) provided by Hamster Works (the “Operator”), and the services, functions, websites, and other related services provided by the Operator in connection with the App (collectively with the App, the “Service”).
+2. In these Terms, “Service” means the App itself and the services, functions, websites, and other related services provided by the Operator in connection with the App.
+3. Users shall use the Service after agreeing to these Terms.
+4. “User” means any individual or legal entity using the Service.
+
+---
+
+# Article 2 (License)
+
+1. The Operator grants each User a non-exclusive and non-transferable right to use the Service in accordance with these Terms.
+2. The Service is not sold to Users; a license to use the Service is granted under these Terms.
+3. Users shall use the Service in accordance with these Terms and applicable laws and regulations.
+
+---
+
+# Article 3 (Prohibited Activities)
+Users shall not engage in any of the following activities when using the Service.
+
+1. Using the Service for an illegal or unauthorized purpose.
+2. Providing the Service to a third party by copying, selling, redistributing, lending, transferring, sublicensing, or any other means, except where expressly permitted by law or these Terms.
+3. Analyzing or modifying the Service by reverse engineering, decompiling, disassembling, or any other means, except where such restriction is prohibited by applicable law.
+4. Interfering with the normal operation of the Service.
+5. Making unauthorized access, imposing excessive load, or conducting any other attack against the Service or the Operator’s systems.
+6. Infringing the rights, interests, or reputation of the Operator or any third party.
+7. Any other activity that the Operator reasonably determines to be inappropriate.
+
+---
+
+# Article 4 (Updates and Changes to Specifications)
+
+1. The Operator may change the specifications of the Service from time to time for reasons including adding, changing, improving, or correcting functions, implementing security measures, or technical necessity.
+2. The functions, specifications, content, design, operating methods, supported devices, supported operating systems and OS versions, supported external equipment, communication methods, and other conditions of the Service may be changed, added, removed, or discontinued without prior notice or announcement.
+3. The Operator does not guarantee that any particular function or specification will be provided in the future and may change, remove, or discontinue existing functions or specifications.
+4. Updates or specification changes may make previously available functions unavailable or change the operation, operating methods, or usage environment.
+5. The Operator may temporarily suspend, change, or terminate all or part of the Service without prior notice or announcement for technical, operational, legal, or other reasonable reasons.
+6. Any damage incurred by a User due to updates, specification changes, removal or discontinuation of functions, suspension, or termination of the Service shall be governed by Article 10 (Limitation of Liability for Damages).
+
+---
+
+# Article 5 (Fees and Subscriptions)
+
+1. The Service may include paid functions or subscriptions, including automatically renewing subscriptions.
+2. Fees, periods, renewal conditions, and other purchase conditions for paid functions or subscriptions shall be governed by the information displayed at the time of purchase and the conditions displayed on the App Store, Google Play, or other sales platforms.
+3. A subscription may renew automatically unless the User cancels it through the prescribed method.
+4. Apple, Google, or another sales platform may impose its own terms and conditions regarding payment, billing, renewal, cancellation, refunds, and other purchase matters.
+5. Even if a User cancels a subscription, fees already paid may not be refunded except where a refund is permitted by applicable law or the refund rules of the sales platform.
+
+---
+
+# Article 6 (Third-Party Services)
+
+1. The Service may integrate with or depend on products, services, or technologies provided by Apple, Google, external displays, USB devices, networks, cloud services, or other third parties.
+2. All or part of the Service may become unavailable due to changes, defects, suspension, termination, or other circumstances affecting third-party products, services, operating systems, APIs, specifications, networks, or other environments.
+3. Third-party services are subject to the terms of use, privacy policies, and other conditions established by the respective third parties.
+
+---
+
+# Article 7 (Intellectual Property Rights)
+
+1. Copyright and other intellectual property rights in the Service, the App, its name, logos, designs, programs, images, text, and all other content comprising the Service belong to the Operator or a third party with legitimate rights.
+2. These Terms do not transfer any intellectual property rights in the Service to Users.
+3. If the Service includes open-source software or other third-party software, the applicable license terms for that software shall apply.
+
+---
+
+# Article 8 (Privacy Policy)
+
+1. Information Collected
+The App does not collect or externally transmit Users’ personal information. However, the App may include a log collection function for debugging and investigating defects.
+
+2. Logs
+Depending on the usage environment, debug logs collected by the App may contain a User’s IP address, device name, and other device-related information. The App does not independently send these logs to an external server or other third party without the User’s action. If a User voluntarily sends logs or other information to the Operator, the Operator may use that information for providing the Service, investigating defects, responding to inquiries, and other necessary purposes. Except where required by law, the Operator will not provide or share information voluntarily provided by a User with third parties.
+
+3. Advertising, Analytics, and Crash Reports
+The App does not use advertising SDKs, access analytics SDKs, usage analytics SDKs, crash-reporting SDKs, or similar third-party SDKs.
+
+4. Storage and Deletion of Information
+Data stored by the App on a User’s device is managed through the User’s device or the functions and settings of the operating system. If the Operator receives information from a User through an inquiry or other means, the Operator may retain that information for the period necessary to respond to the inquiry, investigate defects, or fulfill other necessary purposes. The Operator will endeavor to delete or dispose of information that is no longer necessary in an appropriate manner, except where retention is required by law.
+
+---
+
+# Article 9 (Disclaimer of Warranties and Defects)
+
+1. The Service is provided on an “AS IS” and “AS AVAILABLE” basis.
+2. To the maximum extent permitted by applicable law, the Operator makes no warranties regarding the Service, including the following.
+1. That the Service is free of bugs, errors, or other defects.
+2. That the Service will always operate normally.
+3. That the Service will be available without interruption, suspension, or delay.
+4. That the Service will operate normally with any particular device, OS, OS version, external display, USB device, cable, network, driver, or other environment.
+5. That the Service will meet a User’s particular purpose or expected result.
+6. That data displayed, stored, transferred, or synchronized by the Service will always be accurate, complete, or free from loss.
+7. That defects in the Service will necessarily be corrected.
+3. The App may crash, freeze, terminate unexpectedly, display incorrectly, fail to connect, fail to receive input, become delayed, lose or corrupt data, or otherwise behave unexpectedly while the Service is used.
+4. The Service may not operate normally due to specification changes, defects, compatibility issues, or other circumstances involving an OS, device, external display, USB device, cable, network, driver, software or service provided by a third party, or other third-party product or service.
+5. The Operator may provide corrections, updates, or other responses if a defect or other problem is discovered in the Service, but is not obligated to do so.
+6. Users understand that important data may be lost when using the Service and shall, when necessary, take backup and other data-preservation measures at their own responsibility.
+
+---
+
+# Article 10 (Limitation of Liability for Damages)
+
+1. To the maximum extent permitted by applicable law, the Operator shall not be liable for lost profits, lost revenue, loss of business opportunities, loss or corruption of data, business interruption, or any other indirect, incidental, special, or consequential damages arising from or related to the use or inability to use the Service, defects, errors, bugs, suspension, termination, loss or corruption of data, or any other matter related to the Service.
+2. If the agreement between a User and the Operator is subject to the Consumer Contract Act or other mandatory laws, this disclaimer or limitation of liability shall not apply to the extent invalidated by those laws.
+3. If the law does not permit a complete disclaimer or limitation of the Operator’s liability, the Operator’s liability shall be limited to the minimum extent permitted by that law.
+4. This Article is not intended to disclaim liability that cannot be disclaimed or limited under applicable law.
+
+---
+
+# Article 11 (User Responsibility)
+
+1. Users shall use the Service at their own responsibility.
+2. If damage, loss, or any other disadvantage occurs to a User or a third party because of a User’s use of the Service, the User shall conduct the necessary checks and take measures regarding that use at the User’s own responsibility.
+3. When using the Service for business, commercial environments, or other important purposes, Users shall prepare necessary alternatives and backups in case the Service does not operate normally.
+
+---
+
+# Article 12 (Suspension and Termination of Use)
+
+1. If a User violates these Terms, the Operator may suspend or restrict that User’s use of the Service without prior notice.
+2. The Operator may suspend or terminate all or part of the Service for technical, operational, legal, or other reasonable reasons.
+3. Even if a User suffers damage due to suspension or termination of the Service, the Operator shall not be liable to the maximum extent permitted by applicable law.
+
+---
+
+# Article 13 (Changes to These Terms)
+
+1. The Operator may change these Terms when necessary.
+2. These Terms may be changed without prior notice or announcement in response to laws, the content of the Service, technology, or other circumstances.
+3. For important changes, the Operator will endeavor to inform Users of the changes and their effective date through an appropriate method whenever possible.
+4. The changed Terms shall apply when posted on the Service or a website designated by the Operator, unless otherwise specified.
+
+---
+
+# Article 14 (Language)
+
+1. Even if translations of these Terms and the Privacy Policy are provided in other languages, the Japanese version shall be the controlling text.
+2. If there is any difference in content or interpretation between the Japanese version and a translated version, the Japanese version shall prevail.
+
+---
+
+# Article 15 (Third-Party Terms)
+
+When using the Service through the Apple App Store, Google Play, or another platform provided by a third party, Users shall also comply with the terms of use and other applicable conditions of that platform.
+
+---
+
+# Article 16 (Governing Law and Jurisdiction)
+
+1. These Terms shall be governed by and interpreted in accordance with the laws of Japan, except where mandatory laws of the country or region in which a User resides provide otherwise.
+2. If a dispute arises between the Operator and a User regarding the Service or these Terms, it shall be resolved in accordance with applicable law.
+
+---
+
+# Article 17 (Contact)
+
+For inquiries regarding the Service, these Terms, privacy, or other matters, please contact the following address.
+
+Email: contact@hamster-works.com
+
+---
+
+# Article 18 (Severability)
+
+If any provision or part of these Terms is determined to be invalid or unenforceable under applicable law, the remaining provisions shall remain in full force and effect.`
+
 const addDriverDownloadNote = (support: string) => {
   const driverLabel = currentLanguage === 'ja' ? 'ドライバアプリ' : currentLanguage === 'en' ? 'driver app' : currentLanguage === 'fr' ? 'application pilote' : 'driver app'
   const receiverLabel = currentLanguage === 'ja' ? 'レシーバアプリ' : currentLanguage === 'en' ? 'receiver app' : currentLanguage === 'fr' ? 'application réceptrice' : 'receiver app'
@@ -211,6 +563,7 @@ function productPage(product: Product) {
   const storeLinks = product.links ? `<div class="store-links">${product.links}</div>` : ''
   const galleryHtml = product.gallery ? product.gallery.length > 1 ? `<div class="feature-gallery" data-gallery><button class="gallery-image-button" type="button" aria-label="${currentCopy.viewProducts}"><img src="${product.gallery[0]}" alt="${product.name}"></button><div class="gallery-dots" role="tablist" aria-label="${currentCopy.featuresEyebrow}">${product.gallery.map((_, index) => `<button type="button" role="tab" aria-selected="${index === 0}" aria-label="${index + 1}" data-gallery-index="${index}"></button>`).join('')}</div></div>` : `<div class="feature-gallery"><img class="gallery-static-image" style="width:504px;max-width:100%;height:auto" src="${product.gallery[0]}" alt="${product.name}"></div>` : ''
   const privacyHtml = product.privacy.split('\n\n').map((paragraph) => `<p>${paragraph}</p>`).join('')
+  const isLocalizedExternalTerms = product.slug === 'external-touch-display'
   const supportHtml = product.support ? product.support.split('\n\n').map((paragraph) => {
     const headingClass = supportHeadingLabels.includes(paragraph) ? ' class="support-subheading"' : ''
     const imageLinks = paragraph.match(/<a class="support-reference-link"[\s\S]*?<\/a>/g) ?? []
@@ -222,10 +575,13 @@ function productPage(product: Product) {
     }
     return `<p${headingClass}>${paragraph}</p>`
   }).join('') : ''
-  const disclaimerHtml = product.disclaimer ? `<section class="disclaimer"><p class="eyebrow">DISCLAIMER</p><h2>${currentCopy.disclaimerTitle}</h2><p>${product.disclaimer}</p></section>` : ''
+  const disclaimerHtml = product.disclaimer && !isLocalizedExternalTerms ? `<section class="disclaimer"><p class="eyebrow">DISCLAIMER</p><h2>${currentCopy.disclaimerTitle}</h2><p>${product.disclaimer}</p></section>` : ''
+  const privacySection = isLocalizedExternalTerms
+    ? `<section class="legal-terms"><div><p class="eyebrow">TERMS & PRIVACY</p><h2>${currentLanguage === 'ja' ? '利用規約・プライバシーポリシー' : 'Terms of Use & Privacy Policy'}</h2></div><div class="legal-terms-copy"><details><summary>eXternalTouchDisplay ${currentLanguage === 'ja' ? '利用規約・プライバシーポリシー' : 'Terms of Use & Privacy Policy'}</summary><div class="legal-terms-body">${legalTermsHtml(currentLanguage === 'ja' ? externalTouchTermsJa : externalTouchTermsEn)}</div></details></div></section>`
+    : `<section class="privacy"><div><p class="eyebrow">${currentCopy.privacyEyebrow}</p><h2>${currentCopy.privacyTitle}</h2></div><div class="privacy-copy">${privacyHtml}</div></section>`
   const formUrl = product.formUrl ?? CONTACT_FORM_URL
   const supportButton = product.slug === 'external-touch-display' ? '' : `<a class="button button-dark" href="${formUrl}" target="_blank" rel="noreferrer">${currentCopy.feedbackButton}</a>`
-  return `${header()}<main class="product-page"><a class="back-link" href="#/">${currentCopy.backToProducts}</a><section class="product-hero accent-${product.accent}"><div><p class="eyebrow">${currentCopy.productEyebrow} / ${product.slug.toUpperCase()}</p><div class="product-title">${product.icon ? `<img src="${product.icon}" alt="${product.name}">` : ''}<h1>${product.name}</h1></div><p class="product-label">${product.label}</p><p class="hero-lede">${product.description}</p>${storeLinks}</div><div class="product-image"><img src="${product.image}" alt="${product.name}"></div></section><section class="detail-grid"><div><p class="eyebrow">${currentCopy.featuresEyebrow}</p><h2>${product.name}${currentCopy.featuresTitle}</h2>${galleryHtml}</div><ul class="feature-list">${product.features.map((feature, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span><strong>${feature}</strong><i aria-hidden="true">↗</i></li>`).join('')}</ul></section>${product.support ? `<section class="support"><div><p class="eyebrow">${currentCopy.supportEyebrow}</p><h2>${currentCopy.supportTitle}</h2></div><div class="support-copy">${supportHtml}${supportButton}</div></section>` : ''}${disclaimerHtml}<section class="privacy"><div><p class="eyebrow">${currentCopy.privacyEyebrow}</p><h2>${currentCopy.privacyTitle}</h2></div><div class="privacy-copy">${privacyHtml}</div></section><section class="contact-strip"><div><p class="eyebrow">${currentCopy.questionsEyebrow}</p><h2>${currentCopy.productContactTitle}</h2></div><a class="button button-light" href="${formUrl}" target="_blank" rel="noreferrer">${currentCopy.formButton} <span aria-hidden="true">↗</span></a></section></main>${footer()}`
+  return `${header()}<main class="product-page"><a class="back-link" href="#/">${currentCopy.backToProducts}</a><section class="product-hero accent-${product.accent}"><div><p class="eyebrow">${currentCopy.productEyebrow} / ${product.slug.toUpperCase()}</p><div class="product-title">${product.icon ? `<img src="${product.icon}" alt="${product.name}">` : ''}<h1>${product.name}</h1></div><p class="product-label">${product.label}</p><p class="hero-lede">${product.description}</p>${storeLinks}</div><div class="product-image"><img src="${product.image}" alt="${product.name}"></div></section><section class="detail-grid"><div><p class="eyebrow">${currentCopy.featuresEyebrow}</p><h2>${product.name}${currentCopy.featuresTitle}</h2>${galleryHtml}</div><ul class="feature-list">${product.features.map((feature, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span><strong>${feature}</strong><i aria-hidden="true">↗</i></li>`).join('')}</ul></section>${product.support ? `<section class="support"><div><p class="eyebrow">${currentCopy.supportEyebrow}</p><h2>${currentCopy.supportTitle}</h2></div><div class="support-copy">${supportHtml}${supportButton}</div></section>` : ''}${disclaimerHtml}${privacySection}<section class="contact-strip"><div><p class="eyebrow">${currentCopy.questionsEyebrow}</p><h2>${currentCopy.productContactTitle}</h2></div><a class="button button-light" href="${formUrl}" target="_blank" rel="noreferrer">${currentCopy.formButton} <span aria-hidden="true">↗</span></a></section></main>${footer()}`
 }
 
 function initGallery() {
@@ -255,12 +611,39 @@ function initGallery() {
 function render() {
   document.documentElement.lang = currentLanguage
   const sectionHash = ['#about', '#products'].includes(window.location.hash)
-  const slug = window.location.hash.match(/^#\/product\/(.+)$/)?.[1]
+  const routeMatch = window.location.hash.match(/^#\/product\/([^#]+)(?:#(.+))?$/)
+  const slug = routeMatch?.[1]
+  const anchor = routeMatch?.[2]
   const product = products.find((item) => item.slug === slug || (slug === 'external-touch-screen' && item.slug === 'external-touch-display'))
   app.innerHTML = product ? productPage(product) : home()
+  if (product?.slug === 'external-touch-display') {
+    document.querySelector<HTMLElement>('.support')?.setAttribute('id', 'support')
+    document.querySelector<HTMLElement>('.legal-terms')?.setAttribute('id', 'eula')
+    const anchorLabel = currentLanguage === 'ja' ? 'このセクションへのリンク' : 'Link to this section'
+    for (const [selector, anchor] of [['.support h2', 'support'], ['.legal-terms h2', 'eula']] as const) {
+      const heading = document.querySelector<HTMLElement>(selector)
+      if (!heading) continue
+      const link = document.createElement('a')
+      link.className = 'section-anchor'
+      link.href = `#/product/${product.slug}#${anchor}`
+      link.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.59 13.41a2 2 0 0 0 2.82 0l3.59-3.59a2 2 0 0 0-2.82-2.82l-1.29 1.29M13.41 10.59a2 2 0 0 0-2.82 0L7 14.18A2 2 0 0 0 9.82 17l1.29-1.29" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>'
+      link.setAttribute('aria-label', anchorLabel)
+      link.title = anchorLabel
+      link.style.fontSize = '0.42em'
+      link.style.marginLeft = '12px'
+      link.style.verticalAlign = 'middle'
+      link.style.letterSpacing = '0'
+      link.style.display = 'inline-flex'
+      link.style.width = '0.9em'
+      link.style.height = '0.9em'
+      link.style.color = 'var(--muted)'
+      heading.append(' ', link)
+    }
+  }
   initGallery()
   bindLanguageSelector()
-  if (!sectionHash) window.scrollTo({ top: 0, behavior: 'instant' })
+  if (anchor) document.getElementById(anchor)?.scrollIntoView({ behavior: 'instant' })
+  else if (!sectionHash) window.scrollTo({ top: 0, behavior: 'instant' })
 }
 
 window.addEventListener('hashchange', render)
