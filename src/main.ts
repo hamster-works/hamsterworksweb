@@ -156,6 +156,7 @@ const externalTouchTermsJa = `制定日：2026年09月21日
 ---
 
 # 第3条（禁止事項）
+
 利用者は、本サービスの利用にあたり、以下の行為を行ってはなりません。
 
 1. 本サービスを違法な目的または不正な目的で利用すること。
@@ -335,6 +336,7 @@ Operator: Hamster Works
 ---
 
 # Article 3 (Prohibited Activities)
+
 Users shall not engage in any of the following activities when using the Service.
 
 1. Using the Service for an illegal or unauthorized purpose.
