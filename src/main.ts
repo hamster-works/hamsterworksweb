@@ -560,6 +560,13 @@ function home() {
   return `${header()}<main><section class="hero"><div class="hero-copy"><p class="eyebrow">${currentCopy.homeEyebrow}</p><h1>${currentCopy.homeTitleBefore}<br><em>${currentCopy.homeTitleEmphasis}</em>${currentCopy.homeTitleAfter}</h1><p class="hero-lede">${currentCopy.homeDescription}</p><a class="button button-dark" href="#products">${currentCopy.viewProducts} <span aria-hidden="true">↓</span></a></div><div class="hero-art" aria-label="Software for everyday life"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-note"><span class="note-dot"></span><span>small tools,<br>better days</span></div><div class="hero-panel"><div class="panel-top"><span></span><span></span><span></span></div><div class="panel-lines"><i></i><i></i><i></i></div><div class="panel-ring">03</div></div></div></section><section id="about" class="intro-section"><div class="section-index">${currentCopy.aboutIndex}</div><div><h2>${currentCopy.aboutTitle}</h2><p>${currentCopy.aboutDescription}</p></div></section><section id="products" class="products-section"><div class="section-heading"><div><p class="eyebrow">${currentCopy.productsEyebrow}</p><h2>${currentCopy.productsTitle}</h2></div></div><div class="product-grid">${products.map((product, index) => { const localized = localizedProduct(product); return `<a class="product-card accent-${localized.accent}" href="#/product/${localized.slug}"><div class="card-number">0${index + 1}</div><img src="${localized.image}" alt="${localized.name}"><div class="card-body"><p class="card-label">${localized.label}</p><h3 class="card-title">${localized.icon ? `<img class="card-icon" src="${localized.icon}" alt="">` : ''}<span>${localized.name}</span></h3><span class="text-link">${currentCopy.viewProducts} <span aria-hidden="true">↗</span></span></div></a>` }).join('')}</div></section><section class="contact-strip"><div><p class="eyebrow">${currentCopy.contactEyebrow}</p><h2>${currentCopy.contactTitle}</h2></div><a class="button button-light" href="${CONTACT_FORM_URL}" target="_blank" rel="noreferrer">${currentCopy.contactButton} <span aria-hidden="true">↗</span></a></section></main>${footer()}`
 }
 
+function legalPage() {
+  const isJapanese = currentLanguage === 'ja'
+  const title = isJapanese ? '利用規約・プライバシーポリシー' : 'Terms of Use & Privacy Policy'
+  const termsTitle = isJapanese ? 'eXternalTouchDisplay 利用規約・プライバシーポリシー' : 'eXternalTouchDisplay Terms of Use & Privacy Policy'
+  return `${header()}<main class="legal-page"><a class="back-link" href="#/product/external-touch-display">${currentCopy.backToProducts}</a><section class="legal-terms legal-document"><div><p class="eyebrow">TERMS & PRIVACY</p><h1>${title}</h1></div><div><h2>${termsTitle}</h2><div class="legal-terms-body">${legalTermsHtml(isJapanese ? externalTouchTermsJa : externalTouchTermsEn)}</div></div></section></main>${footer()}`
+}
+
 function productPage(product: Product) {
   product = localizedProduct(product)
   const storeLinks = product.links ? `<div class="store-links">${product.links}</div>` : ''
@@ -579,7 +586,7 @@ function productPage(product: Product) {
   }).join('') : ''
   const disclaimerHtml = product.disclaimer && !isLocalizedExternalTerms ? `<section class="disclaimer"><p class="eyebrow">DISCLAIMER</p><h2>${currentCopy.disclaimerTitle}</h2><p>${product.disclaimer}</p></section>` : ''
   const privacySection = isLocalizedExternalTerms
-    ? `<section class="legal-terms"><div><p class="eyebrow">TERMS & PRIVACY</p><h2>${currentLanguage === 'ja' ? '利用規約・プライバシーポリシー' : 'Terms of Use & Privacy Policy'}</h2></div><div class="legal-terms-copy"><details><summary>eXternalTouchDisplay ${currentLanguage === 'ja' ? '利用規約・プライバシーポリシー' : 'Terms of Use & Privacy Policy'}</summary><div class="legal-terms-body">${legalTermsHtml(currentLanguage === 'ja' ? externalTouchTermsJa : externalTouchTermsEn)}</div></details></div></section>`
+    ? `<section class="legal-terms legal-terms-link"><div><p class="eyebrow">TERMS & PRIVACY</p><h2>${currentLanguage === 'ja' ? '利用規約・プライバシーポリシー' : 'Terms of Use & Privacy Policy'}</h2></div><div><a class="legal-page-link" href="#/legal/external-touch-display">eXternalTouchDisplay ${currentLanguage === 'ja' ? '利用規約・プライバシーポリシーを読む' : 'Read the Terms of Use & Privacy Policy'} <span aria-hidden="true">↗</span></a></div></section>`
     : `<section class="privacy"><div><p class="eyebrow">${currentCopy.privacyEyebrow}</p><h2>${currentCopy.privacyTitle}</h2></div><div class="privacy-copy">${privacyHtml}</div></section>`
   const formUrl = product.formUrl ?? CONTACT_FORM_URL
   const supportButton = product.slug === 'external-touch-display' ? '' : `<a class="button button-dark" href="${formUrl}" target="_blank" rel="noreferrer">${currentCopy.feedbackButton}</a>`
@@ -614,10 +621,16 @@ function render() {
   document.documentElement.lang = currentLanguage
   const sectionHash = ['#about', '#products'].includes(window.location.hash)
   const routeMatch = window.location.hash.match(/^#\/product\/([^#]+)(?:#(.+))?$/)
+  const legalRouteMatch = window.location.hash.match(/^#\/legal\/([^#]+)$/)
+  if (routeMatch?.[2] === 'eula') {
+    window.location.hash = '#/legal/external-touch-display'
+    return
+  }
   const slug = routeMatch?.[1]
   const anchor = routeMatch?.[2]
   const product = products.find((item) => item.slug === slug || (slug === 'external-touch-screen' && item.slug === 'external-touch-display'))
-  app.innerHTML = product ? productPage(product) : home()
+  const legalProduct = products.find((item) => item.slug === legalRouteMatch?.[1])
+  app.innerHTML = legalProduct?.slug === 'external-touch-display' ? legalPage() : product ? productPage(product) : home()
   if (product?.slug === 'external-touch-display') {
     document.querySelector<HTMLElement>('.support')?.setAttribute('id', 'support')
     document.querySelector<HTMLElement>('.legal-terms')?.setAttribute('id', 'eula')
@@ -627,7 +640,7 @@ function render() {
       if (!heading) continue
       const link = document.createElement('a')
       link.className = 'section-anchor'
-      link.href = `#/product/${product.slug}#${anchor}`
+      link.href = anchor === 'eula' ? '#/legal/external-touch-display' : `#/product/${product.slug}#${anchor}`
       link.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.59 13.41a2 2 0 0 0 2.82 0l3.59-3.59a2 2 0 0 0-2.82-2.82l-1.29 1.29M13.41 10.59a2 2 0 0 0-2.82 0L7 14.18A2 2 0 0 0 9.82 17l1.29-1.29" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>'
       link.setAttribute('aria-label', anchorLabel)
       link.title = anchorLabel
@@ -642,7 +655,6 @@ function render() {
       heading.append(' ', link)
     }
   }
-  if (anchor === 'eula') document.querySelector<HTMLDetailsElement>('.legal-terms details')?.setAttribute('open', '')
   initGallery()
   bindLanguageSelector()
   if (anchor) document.getElementById(anchor)?.scrollIntoView({ behavior: 'instant' })
