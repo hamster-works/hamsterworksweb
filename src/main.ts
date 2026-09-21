@@ -642,6 +642,7 @@ function render() {
       heading.append(' ', link)
     }
   }
+  if (anchor === 'eula') document.querySelector<HTMLDetailsElement>('.legal-terms details')?.setAttribute('open', '')
   initGallery()
   bindLanguageSelector()
   if (anchor) document.getElementById(anchor)?.scrollIntoView({ behavior: 'instant' })
