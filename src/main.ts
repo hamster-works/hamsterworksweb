@@ -1,6 +1,7 @@
 import './style.css'
 import { driverInstallText, getCopy, getLanguage, languages, productCopy, productDetails, setLanguage, type Language } from './i18n'
 import { extraCopy, extraProductCopy, extraProductDetails, extraSystemRequirements } from './i18n-extra'
+import { formatLocalizedTermNumbering, localizedAntiSwipeTerms, withPrivacyCollectionDisclosure } from './antiswipe-terms'
 
 type Product = {
   slug: string
@@ -575,7 +576,7 @@ const antiSwipeTermsJa = `制定日：2026年11月03日
 # 第8条（プライバシーポリシー）
 
 1. 収集する情報
-本アプリは、利用者の個人情報を収集または外部送信しません。当方が、利用者の端末内のデータを取得することはありません。
+本アプリは、利用者の氏名、連絡先等を取得しません。機能の提供に必要な範囲で、利用者が選択・登録した監視アプリの名称・パッケージ名・アイコン、前面に表示されたアプリのパッケージ名、アプリごとの利用時間、設定およびライセンス状態にアクセスし、端末内で処理・保存します。これらの情報を当方または第三者のサーバーに送信・共有しません。詳細は以下のとおりです。
 
 2. 端末内で取り扱う情報
 本アプリは、本サービスの提供のために、監視アプリとして登録されたアプリの名称・パッケージ名・アイコン、アプリごとの利用時間、解除ゲームのプレイ時間・終了回数・クリア回数、ならびに本アプリの設定およびライセンスの状態を取り扱います。これらの情報は、利用者の端末内にのみ保存され、当方または第三者のサーバーへ送信されることはありません。
@@ -779,12 +780,31 @@ function home() {
   return `${header()}<main><section class="hero"><div class="hero-copy"><p class="eyebrow">${currentCopy.homeEyebrow}</p><h1>${currentCopy.homeTitleBefore}<br><em>${currentCopy.homeTitleEmphasis}</em>${currentCopy.homeTitleAfter}</h1><p class="hero-lede">${currentCopy.homeDescription}</p><a class="button button-dark" href="#products">${currentCopy.viewProducts} <span aria-hidden="true">↓</span></a></div><div class="hero-art" aria-label="Software for everyday life"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-note"><span class="note-dot"></span><span>small tools,<br>better days</span></div><div class="hero-panel"><div class="panel-top"><span></span><span></span><span></span></div><div class="panel-lines"><i></i><i></i><i></i></div><div class="panel-ring">03</div></div></div></section><section id="about" class="intro-section"><div class="section-index">${currentCopy.aboutIndex}</div><div><h2>${currentCopy.aboutTitle}</h2><p>${currentCopy.aboutDescription}</p></div></section><section id="products" class="products-section"><div class="section-heading"><div><p class="eyebrow">${currentCopy.productsEyebrow}</p><h2>${currentCopy.productsTitle}</h2></div></div><div class="product-grid">${products.map((product, index) => { const localized = localizedProduct(product); return `<a class="product-card accent-${localized.accent}" href="#/product/${localized.slug}"><div class="card-number">0${index + 1}</div><img src="${localized.image}" alt="${localized.name}"><div class="card-body"><p class="card-label">${localized.label}</p><h3 class="card-title">${localized.icon ? `<img class="card-icon" src="${localized.icon}" alt="">` : ''}<span>${localized.name}</span></h3><span class="text-link">${currentCopy.viewProducts} <span aria-hidden="true">↗</span></span></div></a>` }).join('')}</div></section><section class="contact-strip"><div><p class="eyebrow">${currentCopy.contactEyebrow}</p><h2>${currentCopy.contactTitle}</h2></div><a class="button button-light" href="${CONTACT_FORM_URL}" target="_blank" rel="noreferrer">${currentCopy.contactButton} <span aria-hidden="true">↗</span></a></section></main>${footer()}`
 }
 
+const legalPageLabels: Record<Language, { eyebrow: string; title: string }> = {
+  ja: { eyebrow: '利用規約・プライバシー', title: '利用規約・プライバシーポリシー' },
+  en: { eyebrow: 'TERMS & PRIVACY', title: 'Terms of Use & Privacy Policy' },
+  fr: { eyebrow: 'CONDITIONS & CONFIDENTIALITÉ', title: 'Conditions d’utilisation et Politique de confidentialité' },
+  de: { eyebrow: 'NUTZUNG & DATENSCHUTZ', title: 'Nutzungsbedingungen & Datenschutzerklärung' },
+  es: { eyebrow: 'CONDICIONES Y PRIVACIDAD', title: 'Condiciones de uso y Política de privacidad' },
+  it: { eyebrow: 'CONDIZIONI E PRIVACY', title: 'Termini d’uso e Informativa sulla privacy' },
+  pt: { eyebrow: 'TERMOS E PRIVACIDADE', title: 'Termos de utilização e Política de privacidade' },
+  ko: { eyebrow: '이용약관 및 개인정보', title: '이용약관 및 개인정보 처리방침' },
+  zh: { eyebrow: '使用条款与隐私', title: '使用条款与隐私政策' },
+  tw: { eyebrow: '使用條款與隱私', title: '使用條款與隱私權政策' },
+  ru: { eyebrow: 'УСЛОВИЯ И КОНФИДЕНЦИАЛЬНОСТЬ', title: 'Условия использования и Политика конфиденциальности' },
+  nl: { eyebrow: 'VOORWAARDEN & PRIVACY', title: 'Gebruiksvoorwaarden en Privacyverklaring' },
+}
+
 function legalPage(product: Product) {
-  const isJapanese = currentLanguage === 'ja'
   const terms = legalTerms[product.slug]
-  const title = isJapanese ? '利用規約・プライバシーポリシー' : 'Terms of Use & Privacy Policy'
-  const termsTitle = isJapanese ? `${product.name} 利用規約・プライバシーポリシー` : `${product.name} Terms of Use & Privacy Policy`
-  return `${header()}<main class="legal-page"><a class="back-link" href="#/product/${product.slug}">${currentCopy.backToProducts}</a><section class="legal-terms legal-document"><div><p class="eyebrow">TERMS & PRIVACY</p><h1>${title}</h1></div><div><h2>${termsTitle}</h2><div class="legal-terms-body">${legalTermsHtml(isJapanese ? terms.ja : terms.en ?? terms.ja)}</div></div></section></main>${footer()}`
+  const labels = legalPageLabels[currentLanguage]
+  const termsTitle = `${product.name} ${labels.title}`
+  const localizedTerms = currentLanguage === 'ja'
+    ? terms.ja
+    : product.slug === 'antiswipe'
+      ? formatLocalizedTermNumbering(withPrivacyCollectionDisclosure(localizedAntiSwipeTerms[currentLanguage], currentLanguage))
+      : terms.en ?? terms.ja
+  return `${header()}<main class="legal-page"><a class="back-link" href="#/product/${product.slug}">${currentCopy.backToProducts}</a><section class="legal-terms legal-document"><div><p class="eyebrow">${labels.eyebrow}</p><h1>${labels.title}</h1></div><div><h2>${termsTitle}</h2><div class="legal-terms-body">${legalTermsHtml(localizedTerms)}</div></div></section></main>${footer()}`
 }
 
 function productPage(product: Product) {
