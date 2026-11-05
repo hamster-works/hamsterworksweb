@@ -106,17 +106,17 @@ export const productCopy: Partial<Record<Language, Record<string, { name: string
   ja: {
     'expiry-date-manager': { name: 'Expiry Date Manager', label: '食品ロスを減らしたい方に最適な「賞味期限管理」アプリ。', description: 'バーコードを読み取って商品を登録、賞味期限が近づいたらプッシュ通知でお知らせ。音声での日付登録は意外に便利。キッチンでお手軽簡単に登録！' },
     'external-touch-display': { name: 'eXternalTouchDisplay', label: 'タブレット/スマートフォンをPCのタッチ対応サブディスプレイに。', description: 'デスクトップを広く使いたいとき、プレゼン中に手元で操作したいとき、サブモニターをすぐに追加したいときに活用できます。Wi-Fiで接続し、タブレットから直接タッチ操作できます。' },
-    antiswipe: { name: 'antiSwipe', label: '意図しないスワイプを、静かに防ぐ', description: '画面に触れたときの意図しない操作を抑え、見る・読む・置いておく時間を守ります。' },
+    antiswipe: { name: 'AntiSwipe', label: '意図しないスワイプを、静かに防ぐ', description: '画面に触れたときの意図しない操作を抑え、見る・読む・置いておく時間を守ります。' },
   },
   en: {
     'expiry-date-manager': { name: 'Expiry Date Manager', label: 'A simple expiry-date manager for reducing food waste.', description: 'Scan barcodes to register products and get a local notification before they expire. Voice input makes adding dates easy in the kitchen.' },
     'external-touch-display': { name: 'eXternalTouchDisplay', label: 'Turn your tablet or smartphone into a touch-enabled second display for your PC.', description: 'Expand your desktop, control presentations from your hands, or add a second monitor over Wi-Fi with direct touch control.' },
-    antiswipe: { name: 'antiSwipe', label: 'Quietly prevent unintended swipes.', description: 'Block accidental touches and protect your time spent viewing, reading, or simply leaving the screen alone.' },
+    antiswipe: { name: 'AntiSwipe', label: 'Quietly prevent unintended swipes.', description: 'Block accidental touches and protect your time spent viewing, reading, or simply leaving the screen alone.' },
   },
   fr: {
     'expiry-date-manager': { name: 'Expiry Date Manager', label: 'Une application simple pour gérer les dates et réduire le gaspillage alimentaire.', description: 'Scannez les codes-barres pour enregistrer vos produits et recevez une notification locale avant leur expiration. La saisie vocale facilite l’ajout des dates en cuisine.' },
     'external-touch-display': { name: 'eXternalTouchDisplay', label: 'Transformez votre tablette ou smartphone en second écran tactile pour votre PC.', description: 'Étendez votre bureau, contrôlez vos présentations ou ajoutez rapidement un second écran en Wi-Fi avec le contrôle tactile.' },
-    antiswipe: { name: 'antiSwipe', label: 'Bloquez discrètement les glissements involontaires.', description: 'Limitez les touches accidentelles et protégez vos moments de lecture, de consultation ou de pause.' },
+    antiswipe: { name: 'AntiSwipe', label: 'Bloquez discrètement les glissements involontaires.', description: 'Limitez les touches accidentelles et protégez vos moments de lecture, de consultation ou de pause.' },
   },
 }
 

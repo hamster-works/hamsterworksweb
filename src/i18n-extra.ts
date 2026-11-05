@@ -16,7 +16,7 @@ export const extraCopy: Partial<Record<Language, Record<string, string>>> = {
 }
 
 const productNames: Partial<Record<Language, [string, string, string]>> = {
-  de: ['Expiry Date Manager', 'eXternalTouchDisplay', 'antiSwipe'], es: ['Expiry Date Manager', 'eXternalTouchDisplay', 'antiSwipe'], it: ['Expiry Date Manager', 'eXternalTouchDisplay', 'antiSwipe'], pt: ['Expiry Date Manager', 'eXternalTouchDisplay', 'antiSwipe'], ko: ['Expiry Date Manager', 'eXternalTouchDisplay', 'antiSwipe'], zh: ['Expiry Date Manager', 'eXternalTouchDisplay', 'antiSwipe'], tw: ['Expiry Date Manager', 'eXternalTouchDisplay', 'antiSwipe'], ru: ['Expiry Date Manager', 'eXternalTouchDisplay', 'antiSwipe'], nl: ['Expiry Date Manager', 'eXternalTouchDisplay', 'antiSwipe'],
+  de: ['Expiry Date Manager', 'eXternalTouchDisplay', 'AntiSwipe'], es: ['Expiry Date Manager', 'eXternalTouchDisplay', 'AntiSwipe'], it: ['Expiry Date Manager', 'eXternalTouchDisplay', 'AntiSwipe'], pt: ['Expiry Date Manager', 'eXternalTouchDisplay', 'AntiSwipe'], ko: ['Expiry Date Manager', 'eXternalTouchDisplay', 'AntiSwipe'], zh: ['Expiry Date Manager', 'eXternalTouchDisplay', 'AntiSwipe'], tw: ['Expiry Date Manager', 'eXternalTouchDisplay', 'AntiSwipe'], ru: ['Expiry Date Manager', 'eXternalTouchDisplay', 'AntiSwipe'], nl: ['Expiry Date Manager', 'eXternalTouchDisplay', 'AntiSwipe'],
 }
 
 const productLabels: Partial<Record<Language, [string, string, string]>> = {

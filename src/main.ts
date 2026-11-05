@@ -56,13 +56,21 @@ const products: Product[] = [
   },
   {
     slug: 'antiswipe',
-    name: 'antiSwipe',
-    label: '意図しないスワイプを、静かに防ぐ',
-    description: '画面に触れたときの意図しない操作を抑え、見る・読む・置いておく時間を守ります。',
+    name: 'AntiSwipe',
+    label: '「気が付いたら２時間も過ぎていた」無意識のスワイプとさようなら。',
+    description: '無意識のスワイプに費やしていた時間を取り戻そう。アプリを登録すれば、起動時や利用中にアプリが少しだけ邪魔してくれて、使いすぎにやさしいブレーキをかけてくれます。もちろん、時間経過で終了だってできます。',
     image: 'images/antiswipe.svg',
+    icon: 'images/AiS_icon.png',
+    gallery: ['images/antiswipe-usage-01.jpg', 'images/antiswipe-usage-02.jpg', 'images/antiswipe-usage-03.jpg', 'images/antiswipe-usage-04.jpg', 'images/antiswipe-usage-05.jpg', 'images/antiswipe-usage-06.jpg'],
     accent: 'blue',
-    features: ['意図しないスワイプをブロック', '必要なときだけすぐ解除', '集中したい場面に寄り添う設計'],
-    privacy: 'プライバシーポリシー本文を Google Site の掲載内容に置き換えてください。',
+    features: [
+      '機能概要\n■ SNSや動画のアプリを「監視アプリ」として登録すると、起動時や利用中に少しだけ「お邪魔」が入ります。\n■ 「お邪魔」は「ディレイ（待機）」「解除ゲーム」「バナー通知」や一定時間画面を覆う「カバーアップ」から選べます。\n■ 利用上限に達したら自動でホーム画面へ戻る「終了」設定',
+      '02　ユニークな「お邪魔」解除ゲーム\n■ 少しだけ頭を使うゲームがお邪魔。\n■ 神経衰弱（3x3／4x4）、ミニブロック崩し、ミニインベーダーをクリアするまでアプリが開けません。\n■ ひと呼吸おくことで、無意識の起動に気づくきっかけに',
+      'ダッシュボード\n■ 1日／1週間／1か月／3か月／1年の期間ごとに、アプリとミニゲームの利用時間を確認\n■ 利用時間の推移をグラフで表示',
+      'システム要件\n1. Android：アクセシビリティサービスおよび「使用状況へのアクセス」の許可が必要\n2. iOS：iOS 26.5以降、スクリーンタイムの許可が必要。',
+    ],
+    privacy: '利用規約・プライバシーポリシーをご覧ください。',
+    support: 'よくある質問\n\nQ. 機種変更をしたらライセンスがなくなりました\nA. このアプリの設定から「ライセンス」にある「購入またはライセンスの復元」で復元できます。',
   },
 ]
 
@@ -486,6 +494,217 @@ Email: contact@hamster-works.com
 
 If any provision or part of these Terms is determined to be invalid or unenforceable under applicable law, the remaining provisions shall remain in full force and effect.`
 
+const antiSwipeTermsJa = `制定日：2026年11月03日
+最終更新日：2026年11月03日
+事業者：Hamster Works
+
+---
+
+# 第1条（適用）
+
+1. 本利用規約（以下「本規約」といいます。）は、Hamster Works（以下「当方」といいます。）が提供する「AntiSwipe」アプリケーション（以下「本アプリ」といいます。）および本アプリに関連して当方が提供するサービス、機能、ウェブサイトその他の関連サービス（以下、本アプリと総称して「本サービス」といいます。）の利用条件を定めるものです。
+2. 本規約において「本サービス」とは、本アプリそのものを含み、本アプリに関連して当方が提供するサービス、機能、ウェブサイトその他の関連サービスを意味します。
+3. 利用者は、本規約に同意した上で、本サービスを利用するものとします。
+4. 本規約において「利用者」とは、本サービスを利用するすべての個人または法人をいいます。
+
+---
+
+# 第2条（利用許諾）
+
+1. 当方は、利用者に対し、本規約に従って本サービスを利用するための、非独占的かつ譲渡不能な利用権を許諾します。
+2. 本サービスは利用者に販売されるものではなく、本規約に基づいて利用するためのライセンスが許諾されるものとします。
+3. 利用者は、本規約および適用される法令に従って本サービスを利用するものとします。
+
+---
+
+# 第3条（禁止事項）
+
+利用者は、本サービスの利用にあたり、以下の行為を行ってはなりません。
+
+1. 本サービスを違法な目的または不正な目的で利用すること。
+2. 本人の同意なく、第三者の端末に本サービスを設定し、当該第三者の端末の利用を監視または制限すること。ただし、法令上認められる範囲で保護者が未成年の子の端末に設定する場合を除きます。
+3. 本サービスを複製、販売、再配布、貸与、譲渡、サブライセンスその他の方法により第三者に提供すること。ただし、法令または本規約により明示的に認められる場合を除きます。
+4. 本サービスをリバースエンジニアリング、逆コンパイル、逆アセンブルその他の方法により解析または改変すること。ただし、適用される法令により禁止できない場合を除きます。
+5. 本サービスの正常な動作を妨害する行為。
+6. 本サービスまたは当方のシステムに対して、不正なアクセス、過度な負荷その他の攻撃を行うこと。
+7. 当方または第三者の権利、利益または信用を侵害する行為。
+8. その他、当方が不適切と合理的に判断する行為。
+
+---
+
+# 第4条（アップデートおよび仕様変更）
+
+1. 当方は、本サービスの機能追加、変更、改善、修正、セキュリティ対応、技術上の必要その他の理由により、本サービスの仕様を随時変更することがあります。
+2. 本サービスの機能、仕様、内容、デザイン、操作方法、解除ゲームの種類、対応する端末、対応するOSおよびOSバージョンその他の提供条件等は、事前の通知または予告なく、変更、追加、削除または廃止される場合があります。
+3. 当方は、特定の機能または仕様を将来にわたって提供することを保証するものではなく、既存の機能または仕様を変更、削除または廃止することがあります。
+4. 本サービスのアップデートまたは仕様変更により、以前利用できた機能が利用できなくなったり、動作、操作方法または利用環境が変更されたりする場合があります。
+5. 当方は、技術上、運営上、法令上その他の合理的な理由により、本サービスの全部または一部の提供を、事前の通知または予告なく、一時停止、変更または終了することがあります。
+6. 本サービスのアップデート、仕様変更、機能の削除または廃止、提供停止もしくは終了により利用者に生じた損害については、第11条（損害賠償責任の制限）の定めに従うものとします。
+
+---
+
+# 第5条（料金およびサブスクリプション）
+
+1. 本サービスは、初回利用開始から7日間、無料で利用できます。無料利用期間の経過後に本サービスによるアプリの利用制限を継続するには、月額サブスクリプション（自動更新される定期購入）または買い切りのライセンスの購入が必要です。
+2. 無料利用期間の経過後にライセンスを購入しない場合、登録したアプリの利用制限はすべて無効になります。登録した設定は削除されません。
+3. 有料機能またはサブスクリプションの料金、期間、更新条件その他の購入条件は、購入時に表示される内容、App Store、Google Playその他の販売プラットフォームに表示される条件に従うものとします。
+4. サブスクリプションは、利用者が所定の方法で解約しない限り、自動的に更新される場合があります。解約は、各販売プラットフォームの設定から行うものとします。本アプリを削除しても、サブスクリプションは解約されません。
+5. 支払い、請求、更新、解約、返金その他の購入に関する事項については、Apple、Googleその他の販売プラットフォームが定める規約および条件が適用される場合があります。
+6. 利用者がサブスクリプションを解約した場合でも、既に支払われた料金について、適用される法令または販売プラットフォームの返金規定により返金が認められる場合を除き、返金されないことがあります。
+7. 機種変更等により購入済みのライセンスが反映されない場合、利用者は、本アプリの設定画面にある購入またはライセンスの復元機能により、ライセンスを復元できます。
+
+---
+
+# 第6条（第三者サービスおよびOSの機能）
+
+1. 本サービスは、Apple、Googleその他の第三者が提供する製品、サービス、技術、ならびにAndroidのアクセシビリティサービス、使用状況へのアクセス、iOSのスクリーンタイム（Family Controls、Managed Settings等）その他のOSの機能と連携または依存します。
+2. 第三者の製品、サービス、OS、API、仕様その他の環境の変更、不具合、停止、終了、端末メーカーによる独自の制約またはその他の事情により、本サービスの全部または一部が利用できなくなる場合があります。
+3. 本サービスの一部の機能は、利用者がOSの設定においてアクセシビリティサービス、使用状況へのアクセス、スクリーンタイム、通知その他の権限を許可した場合にのみ動作します。利用者がこれらの権限を許可しない場合または取り消した場合、本サービスの全部または一部が動作しません。
+4. 第三者のサービスについては、それぞれの第三者が定める利用規約、プライバシーポリシーその他の条件が適用されます。
+
+---
+
+# 第7条（知的財産権）
+
+1. 本サービス、本アプリ、名称、ロゴ、デザイン、プログラム、画像、文章、解除ゲームその他本サービスを構成する一切のコンテンツに関する著作権その他の知的財産権は、当方または正当な権利を有する第三者に帰属します。
+2. 本規約は、利用者に対して、本サービスに関する知的財産権を譲渡するものではありません。
+3. 本サービスにオープンソースソフトウェアその他第三者のソフトウェアが含まれる場合、当該ソフトウェアについては、それぞれのライセンス条件が適用されます。
+
+---
+
+# 第8条（プライバシーポリシー）
+
+1. 収集する情報
+本アプリは、利用者の個人情報を収集または外部送信しません。当方が、利用者の端末内のデータを取得することはありません。
+
+2. 端末内で取り扱う情報
+本アプリは、本サービスの提供のために、監視アプリとして登録されたアプリの名称・パッケージ名・アイコン、アプリごとの利用時間、解除ゲームのプレイ時間・終了回数・クリア回数、ならびに本アプリの設定およびライセンスの状態を取り扱います。これらの情報は、利用者の端末内にのみ保存され、当方または第三者のサーバーへ送信されることはありません。
+
+3. アクセシビリティサービスについて（Android）
+本アプリは、監視アプリが起動または表示されたことを検知し、ブロック、ディレイ、解除ゲーム、カバーアップ等の画面を表示するために、Androidのアクセシビリティサービスを使用します。本アプリがアクセシビリティサービスを通じて取得するのは、前面に表示されているアプリのパッケージ名等、アプリの切り替えを判定するために必要な情報に限られます。画面に表示されている文章、画像、動画その他のコンテンツ、利用者の入力内容、パスワード等を取得、記録または送信することはありません。
+
+4. 使用状況へのアクセスについて（Android）
+本アプリは、アプリごとの利用時間をダッシュボードに表示し、利用上限等のルールを適用するために、Androidの使用状況へのアクセスを使用します。取得した情報は端末内でのみ処理されます。
+
+5. スクリーンタイムについて（iOS）
+iOSでは、AppleのスクリーンタイムAPIを使用してアプリの利用を制限します。利用者が選択したアプリはOSにより匿名化された識別子として扱われ、当方が利用者の選択したアプリや利用状況を知ることはありません。
+
+6. 通知
+本アプリの通知は、端末内のローカル通知です。外部サーバーからの送信は行いません。
+
+7. 購入情報
+アプリ内課金の決済は、App Store、Google Playその他の販売プラットフォームを通じて行われます。当方が、利用者のクレジットカード情報その他の決済情報を取得することはありません。購入状態の確認および復元のため、本アプリは販売プラットフォームから購入情報を受信し、端末内に保存します。
+
+8. 広告・解析・クラッシュレポート
+本アプリは、広告SDK、アクセス解析SDK、利用状況解析SDK、クラッシュレポートSDKその他これらに類する第三者提供のSDKを使用していません。
+
+9. 情報の保存および削除
+本アプリが利用者の端末内に保存するデータは、利用者自身の端末またはOSの機能・設定等により管理されます。本アプリのデータは、クラウドへの自動バックアップの対象外であり、本アプリを削除した場合、通常は端末内のデータも削除されます。機種変更時に設定等が引き継がれることは保証されません。当方が利用者から問い合わせ等を通じて情報を受領した場合、その情報は、問い合わせへの対応、不具合調査その他必要な目的のために必要な期間保持することがあります。不要となった情報については、法令上保存が必要な場合を除き、適切な方法で削除または廃棄するよう努めます。当方は、法令に基づく場合を除き、利用者から自発的に提供された情報を第三者に提供または共有しません。
+
+---
+
+# 第9条（健康および医学的効果に関する免責）
+
+1. 本サービスは、利用者が自らのスマートフォン等の利用習慣を見直すことを補助するためのツールであり、医療機器ではありません。
+2. 本サービスは、スマートフォン依存、インターネット依存、ゲーム障害、睡眠障害、うつ症状、注意欠如その他のいかなる疾患または症状の診断、治療、緩和、予防を目的とするものではなく、医学的、心理学的その他の効果を保証するものではありません。
+3. 当方は、本サービスの利用により、利用時間の削減、集中力の向上、睡眠の改善、ストレスの軽減、生活習慣の改善その他利用者が期待する結果が得られることを保証しません。
+4. 本サービスが表示する利用時間、統計その他の情報は、参考情報として提供されるものであり、医学的な判断の根拠として使用しないでください。
+5. 心身の健康に不安がある場合、または依存的な利用にお悩みの場合は、医師その他の専門家にご相談ください。
+6. 解除ゲームは画面の注視や素早い操作を伴います。光の点滅や画面の動きにより体調に異変を感じた場合は、直ちに利用を中止してください。
+
+---
+
+# 第10条（保証の否認および不具合等）
+
+1. 本サービスは、「現状有姿（AS IS）」および「提供可能な状態（AS AVAILABLE）」で提供されます。
+2. 当方は、適用される法令により認められる最大限の範囲において、本サービスについて、以下を含むいかなる保証も行いません。
+1. 本サービスにバグ、エラーその他の不具合が存在しないこと。
+2. 本サービスが常に正常に動作すること。
+3. 本サービスが中断、停止または遅延することなく利用できること。
+4. 本サービスが特定の端末、OS、OSバージョン、端末メーカーの独自機能、省電力設定その他の環境において正常に動作すること。
+5. 本サービスが、監視アプリの起動または利用を常に検知し、確実にブロックまたは制限できること。
+6. 本サービスが表示する利用時間、統計その他のデータが常に正確、完全または消失しないこと。
+7. 本サービスが利用者の特定の目的または期待する結果を満たすこと。
+8. 本サービスの不具合が必ず修正されること。
+3. 本サービスの利用中に、アプリケーションのクラッシュ、フリーズ、予期しない終了、表示の乱れ、検知の遅れ・漏れ、意図しないブロック、データの欠損、データの破損その他の予期しない動作が発生する可能性があります。
+4. OS、端末、第三者が提供するソフトウェアまたはサービスその他の第三者製品・サービスの仕様変更、不具合、互換性その他の事情により、本サービスが正常に動作しない場合があります。
+5. 本サービスによる制限は、OSの設定変更、権限の取り消し、本アプリの削除その他の方法により、利用者自身が解除できる場合があります。
+6. 当方は、本サービスに不具合その他の問題が発見された場合、修正、アップデートその他の対応を行うことがありますが、これらを行う義務を負うものではありません。
+
+---
+
+# 第11条（損害賠償責任の制限）
+
+1. 適用される法令により認められる最大限の範囲において、当方は、本サービスの利用または利用不能、本サービスによるアプリのブロックまたは制限、本サービスの不具合、エラー、バグ、停止、終了、データの消失・破損その他本サービスに関連して生じた、逸失利益、逸失収益、事業機会の喪失、連絡の遅延または不達、データの喪失、データの破損、業務の中断その他の間接損害、付随的損害、特別損害または結果的損害について責任を負わないものとします。
+2. 利用者と当方との間の契約が消費者契約法その他の強行法規の適用を受ける場合、当該法令により無効となる範囲については、本条の免責または責任制限は適用されないものとします。
+3. 当方の責任について法令上完全な免責または責任制限が認められない場合、当方の責任は、当該法令により認められる最小限の範囲に限定されるものとします。
+4. 本条は、適用される法令により免責または責任制限が認められない責任についてまで、当方を免責することを意図するものではありません。
+
+---
+
+# 第12条（利用者の責任）
+
+1. 利用者は、自らの責任において本サービスを利用し、監視アプリ、制限方法、利用上限その他の設定を行うものとします。
+2. 電話、メッセージ、地図、決済、健康管理、防災・緊急情報その他、緊急時や日常生活・業務に必要なアプリを制限の対象とする場合、利用者は、必要なときに利用できなくなる可能性があることを理解した上で、自らの責任において設定するものとします。
+3. 利用者が本サービスを利用したことにより、利用者自身または第三者に損害、損失その他の不利益が生じた場合、利用者は、その利用について必要な確認および対策を自らの責任で行うものとします。
+4. 利用者が未成年者である場合、親権者その他の法定代理人の同意を得た上で本サービスを利用するものとします。
+
+---
+
+# 第13条（利用停止および終了）
+
+1. 利用者が本規約に違反した場合、当方は、事前の通知なく、当該利用者による本サービスの利用を停止または制限することがあります。
+2. 当方は、技術上、運営上、法令上その他の合理的な理由により、本サービスの全部または一部の提供を停止または終了することがあります。
+3. 本サービスの利用停止または終了により利用者に損害が生じた場合であっても、適用される法令により認められる最大限の範囲において、当方は責任を負わないものとします。
+
+---
+
+# 第14条（本規約の変更）
+
+1. 当方は、必要に応じて本規約を変更することがあります。
+2. 本規約は、法令、サービス内容、技術その他の事情に応じて、事前の通知または予告なく変更される場合があります。
+3. 重要な変更を行う場合、当方は、可能な限り適切な方法により変更内容および変更時期を周知するよう努めます。
+4. 変更後の本規約は、当方が本サービス上または当方が指定するウェブサイト上に掲載した時点から、別途定める場合を除き適用されます。
+
+---
+
+# 第15条（言語）
+
+1. 本規約および本プライバシーポリシーについて、他の言語による翻訳版が提供される場合であっても、日本語版を正文とします。
+2. 日本語版と翻訳版との間に内容または解釈の相違がある場合、日本語版が優先するものとします。
+
+---
+
+# 第16条（第三者の規約）
+
+本サービスをApple App Store、Google Playその他の第三者が提供するプラットフォームを通じて利用する場合、利用者は、当該プラットフォームの利用規約その他の適用される条件にも従うものとします。
+
+---
+
+# 第17条（準拠法および管轄）
+
+1. 本規約は、日本法に準拠して解釈されるものとします。ただし、利用者が居住する国または地域の強行法規により別途定められる場合を除きます。
+2. 本サービスまたは本規約に関して当方と利用者との間で紛争が生じた場合、適用される法令に従い解決するものとします。
+
+---
+
+# 第18条（連絡先）
+
+本サービス、本規約、プライバシーその他に関するお問い合わせは、以下の連絡先までご連絡ください。
+
+メールアドレス：contact@hamster-works.com
+
+---
+
+# 第19条（分離可能性）
+
+本規約のいずれかの条項またはその一部が、適用される法令により無効または執行不能と判断された場合であっても、その他の条項は引き続き有効に存続するものとします。`
+
+const legalTerms: Record<string, { ja: string, en?: string }> = {
+  'external-touch-display': { ja: externalTouchTermsJa, en: externalTouchTermsEn },
+  antiswipe: { ja: antiSwipeTermsJa },
+}
+
 const addDriverDownloadNote = (support: string) => {
   const driverLabel = currentLanguage === 'ja' ? 'ドライバアプリ' : currentLanguage === 'en' ? 'driver app' : currentLanguage === 'fr' ? 'application pilote' : 'driver app'
   const receiverLabel = currentLanguage === 'ja' ? 'レシーバアプリ' : currentLanguage === 'en' ? 'receiver app' : currentLanguage === 'fr' ? 'application réceptrice' : 'receiver app'
@@ -560,19 +779,24 @@ function home() {
   return `${header()}<main><section class="hero"><div class="hero-copy"><p class="eyebrow">${currentCopy.homeEyebrow}</p><h1>${currentCopy.homeTitleBefore}<br><em>${currentCopy.homeTitleEmphasis}</em>${currentCopy.homeTitleAfter}</h1><p class="hero-lede">${currentCopy.homeDescription}</p><a class="button button-dark" href="#products">${currentCopy.viewProducts} <span aria-hidden="true">↓</span></a></div><div class="hero-art" aria-label="Software for everyday life"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-note"><span class="note-dot"></span><span>small tools,<br>better days</span></div><div class="hero-panel"><div class="panel-top"><span></span><span></span><span></span></div><div class="panel-lines"><i></i><i></i><i></i></div><div class="panel-ring">03</div></div></div></section><section id="about" class="intro-section"><div class="section-index">${currentCopy.aboutIndex}</div><div><h2>${currentCopy.aboutTitle}</h2><p>${currentCopy.aboutDescription}</p></div></section><section id="products" class="products-section"><div class="section-heading"><div><p class="eyebrow">${currentCopy.productsEyebrow}</p><h2>${currentCopy.productsTitle}</h2></div></div><div class="product-grid">${products.map((product, index) => { const localized = localizedProduct(product); return `<a class="product-card accent-${localized.accent}" href="#/product/${localized.slug}"><div class="card-number">0${index + 1}</div><img src="${localized.image}" alt="${localized.name}"><div class="card-body"><p class="card-label">${localized.label}</p><h3 class="card-title">${localized.icon ? `<img class="card-icon" src="${localized.icon}" alt="">` : ''}<span>${localized.name}</span></h3><span class="text-link">${currentCopy.viewProducts} <span aria-hidden="true">↗</span></span></div></a>` }).join('')}</div></section><section class="contact-strip"><div><p class="eyebrow">${currentCopy.contactEyebrow}</p><h2>${currentCopy.contactTitle}</h2></div><a class="button button-light" href="${CONTACT_FORM_URL}" target="_blank" rel="noreferrer">${currentCopy.contactButton} <span aria-hidden="true">↗</span></a></section></main>${footer()}`
 }
 
-function legalPage() {
+function legalPage(product: Product) {
   const isJapanese = currentLanguage === 'ja'
+  const terms = legalTerms[product.slug]
   const title = isJapanese ? '利用規約・プライバシーポリシー' : 'Terms of Use & Privacy Policy'
-  const termsTitle = isJapanese ? 'eXternalTouchDisplay 利用規約・プライバシーポリシー' : 'eXternalTouchDisplay Terms of Use & Privacy Policy'
-  return `${header()}<main class="legal-page"><a class="back-link" href="#/product/external-touch-display">${currentCopy.backToProducts}</a><section class="legal-terms legal-document"><div><p class="eyebrow">TERMS & PRIVACY</p><h1>${title}</h1></div><div><h2>${termsTitle}</h2><div class="legal-terms-body">${legalTermsHtml(isJapanese ? externalTouchTermsJa : externalTouchTermsEn)}</div></div></section></main>${footer()}`
+  const termsTitle = isJapanese ? `${product.name} 利用規約・プライバシーポリシー` : `${product.name} Terms of Use & Privacy Policy`
+  return `${header()}<main class="legal-page"><a class="back-link" href="#/product/${product.slug}">${currentCopy.backToProducts}</a><section class="legal-terms legal-document"><div><p class="eyebrow">TERMS & PRIVACY</p><h1>${title}</h1></div><div><h2>${termsTitle}</h2><div class="legal-terms-body">${legalTermsHtml(isJapanese ? terms.ja : terms.en ?? terms.ja)}</div></div></section></main>${footer()}`
 }
 
 function productPage(product: Product) {
   product = localizedProduct(product)
   const storeLinks = product.links ? `<div class="store-links">${product.links}</div>` : ''
-  const galleryHtml = product.gallery ? product.gallery.length > 1 ? `<div class="feature-gallery" data-gallery><button class="gallery-image-button" type="button" aria-label="${currentCopy.viewProducts}"><img src="${product.gallery[0]}" alt="${product.name}"></button><div class="gallery-dots" role="tablist" aria-label="${currentCopy.featuresEyebrow}">${product.gallery.map((_, index) => `<button type="button" role="tab" aria-selected="${index === 0}" aria-label="${index + 1}" data-gallery-index="${index}"></button>`).join('')}</div></div>` : `<div class="feature-gallery"><img class="gallery-static-image" style="width:504px;max-width:100%;height:auto" src="${product.gallery[0]}" alt="${product.name}"></div>` : ''
+  const galleryHtml = product.gallery
+    ? product.gallery.length > 1
+      ? `<div class="feature-gallery" data-gallery><button class="gallery-image-button" type="button" aria-label="${currentCopy.viewProducts}"><img src="${product.gallery[0]}" alt="${product.name}" draggable="false"></button><div class="gallery-dots" role="tablist" aria-label="${currentCopy.featuresEyebrow}">${product.gallery.map((_, index) => `<button type="button" role="tab" aria-selected="${index === 0}" aria-label="${index + 1}" data-gallery-index="${index}"></button>`).join('')}</div></div>`
+      : `<div class="feature-gallery"><img class="gallery-static-image" style="width:504px;max-width:100%;height:auto" src="${product.gallery[0]}" alt="${product.name}"></div>`
+    : ''
   const privacyHtml = product.privacy.split('\n\n').map((paragraph) => `<p>${paragraph}</p>`).join('')
-  const isLocalizedExternalTerms = product.slug === 'external-touch-display'
+  const hasLegalPage = product.slug in legalTerms
   const supportHtml = product.support ? product.support.split('\n\n').map((paragraph) => {
     const headingClass = supportHeadingLabels.includes(paragraph) ? ' class="support-subheading"' : ''
     const imageLinks = paragraph.match(/<a class="support-reference-link"[\s\S]*?<\/a>/g) ?? []
@@ -584,36 +808,54 @@ function productPage(product: Product) {
     }
     return `<p${headingClass}>${paragraph}</p>`
   }).join('') : ''
-  const disclaimerHtml = product.disclaimer && !isLocalizedExternalTerms ? `<section class="disclaimer"><p class="eyebrow">DISCLAIMER</p><h2>${currentCopy.disclaimerTitle}</h2><p>${product.disclaimer}</p></section>` : ''
-  const privacySection = isLocalizedExternalTerms
-    ? `<section class="legal-terms legal-terms-link"><div><p class="eyebrow">TERMS & PRIVACY</p><h2>${currentLanguage === 'ja' ? '利用規約・プライバシーポリシー' : 'Terms of Use & Privacy Policy'}</h2></div><div><a class="legal-page-link" href="#/legal/external-touch-display">eXternalTouchDisplay ${currentLanguage === 'ja' ? '利用規約・プライバシーポリシーを読む' : 'Read the Terms of Use & Privacy Policy'} <span aria-hidden="true">↗</span></a></div></section>`
+  const disclaimerHtml = product.disclaimer && !hasLegalPage ? `<section class="disclaimer"><p class="eyebrow">DISCLAIMER</p><h2>${currentCopy.disclaimerTitle}</h2><p>${product.disclaimer}</p></section>` : ''
+  const privacySection = hasLegalPage
+    ? `<section class="legal-terms legal-terms-link"><div><p class="eyebrow">TERMS & PRIVACY</p><h2>${currentLanguage === 'ja' ? '利用規約・プライバシーポリシー' : 'Terms of Use & Privacy Policy'}</h2></div><div><a class="legal-page-link" href="#/legal/${product.slug}">${product.name} ${currentLanguage === 'ja' ? '利用規約・プライバシーポリシーを読む' : 'Read the Terms of Use & Privacy Policy'} <span aria-hidden="true">↗</span></a></div></section>`
     : `<section class="privacy"><div><p class="eyebrow">${currentCopy.privacyEyebrow}</p><h2>${currentCopy.privacyTitle}</h2></div><div class="privacy-copy">${privacyHtml}</div></section>`
   const formUrl = product.formUrl ?? CONTACT_FORM_URL
-  const supportButton = product.slug === 'external-touch-display' ? '' : `<a class="button button-dark" href="${formUrl}" target="_blank" rel="noreferrer">${currentCopy.feedbackButton}</a>`
+  const supportButton = hasLegalPage ? '' : `<a class="button button-dark" href="${formUrl}" target="_blank" rel="noreferrer">${currentCopy.feedbackButton}</a>`
   return `${header()}<main class="product-page"><a class="back-link" href="#/">${currentCopy.backToProducts}</a><section class="product-hero accent-${product.accent}"><div><p class="eyebrow">${currentCopy.productEyebrow} / ${product.slug.toUpperCase()}</p><div class="product-title">${product.icon ? `<img src="${product.icon}" alt="${product.name}">` : ''}<h1>${product.name}</h1></div><p class="product-label">${product.label}</p><p class="hero-lede">${product.description}</p>${storeLinks}</div><div class="product-image"><img src="${product.image}" alt="${product.name}"></div></section><section class="detail-grid"><div><p class="eyebrow">${currentCopy.featuresEyebrow}</p><h2>${product.name}${currentCopy.featuresTitle}</h2>${galleryHtml}</div><ul class="feature-list">${product.features.map((feature, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span><strong>${feature}</strong><i aria-hidden="true">↗</i></li>`).join('')}</ul></section>${product.support ? `<section class="support"><div><p class="eyebrow">${currentCopy.supportEyebrow}</p><h2>${currentCopy.supportTitle}</h2></div><div class="support-copy">${supportHtml}${supportButton}</div></section>` : ''}${disclaimerHtml}${privacySection}<section class="contact-strip"><div><p class="eyebrow">${currentCopy.questionsEyebrow}</p><h2>${currentCopy.productContactTitle}</h2></div><a class="button button-light" href="${formUrl}" target="_blank" rel="noreferrer">${currentCopy.formButton} <span aria-hidden="true">↗</span></a></section></main>${footer()}`
 }
 
-function initGallery() {
+function initGallery(product?: Product) {
   const gallery = document.querySelector<HTMLElement>('[data-gallery]')
-  if (!gallery) return
-  const images = products.find((product) => product.gallery)?.gallery ?? []
+  const images = product?.gallery ?? []
+  if (!gallery || images.length < 2) return
   const imageButton = gallery.querySelector<HTMLButtonElement>('.gallery-image-button')!
   const image = imageButton.querySelector<HTMLImageElement>('img')!
   const dots = [...gallery.querySelectorAll<HTMLButtonElement>('[data-gallery-index]')]
   let currentIndex = 0
-  let startX = 0
+  let startX: number | null = null
+  let suppressClick = false
   const showImage = (index: number) => {
     currentIndex = (index + images.length) % images.length
     image.src = images[currentIndex]
     image.alt = `${currentCopy.featuresEyebrow} ${currentIndex + 1}`
     dots.forEach((dot, dotIndex) => dot.setAttribute('aria-selected', String(dotIndex === currentIndex)))
   }
-  imageButton.addEventListener('click', () => showImage(currentIndex + 1))
-  imageButton.addEventListener('pointerdown', (event) => { startX = event.clientX })
-  imageButton.addEventListener('pointerup', (event) => {
-    const distance = event.clientX - startX
-    if (Math.abs(distance) > 30) showImage(currentIndex + (distance < 0 ? 1 : -1))
+  imageButton.addEventListener('click', () => {
+    if (suppressClick) {
+      suppressClick = false
+      return
+    }
+    showImage(currentIndex + 1)
   })
+  imageButton.addEventListener('pointerdown', (event) => {
+    startX = event.clientX
+    suppressClick = false
+    imageButton.setPointerCapture(event.pointerId)
+  })
+  imageButton.addEventListener('pointerup', (event) => {
+    if (startX === null) return
+    const distance = event.clientX - startX
+    startX = null
+    if (Math.abs(distance) > 30) {
+      showImage(currentIndex + (distance < 0 ? 1 : -1))
+      suppressClick = true
+      window.setTimeout(() => { suppressClick = false }, 0)
+    }
+  })
+  imageButton.addEventListener('pointercancel', () => { startX = null })
   dots.forEach((dot) => dot.addEventListener('click', () => showImage(Number(dot.dataset.galleryIndex))))
 }
 
@@ -622,16 +864,16 @@ function render() {
   const sectionHash = ['#about', '#products'].includes(window.location.hash)
   const routeMatch = window.location.hash.match(/^#\/product\/([^#]+)(?:#(.+))?$/)
   const legalRouteMatch = window.location.hash.match(/^#\/legal\/([^#]+)$/)
-  if (routeMatch?.[2] === 'eula') {
-    window.location.hash = '#/legal/external-touch-display'
-    return
-  }
   const slug = routeMatch?.[1]
   const anchor = routeMatch?.[2]
   const product = products.find((item) => item.slug === slug || (slug === 'external-touch-screen' && item.slug === 'external-touch-display'))
-  const legalProduct = products.find((item) => item.slug === legalRouteMatch?.[1])
-  app.innerHTML = legalProduct?.slug === 'external-touch-display' ? legalPage() : product ? productPage(product) : home()
-  if (product?.slug === 'external-touch-display') {
+  if (anchor === 'eula' && product && product.slug in legalTerms) {
+    window.location.hash = `#/legal/${product.slug}`
+    return
+  }
+  const legalProduct = products.find((item) => item.slug === legalRouteMatch?.[1] && item.slug in legalTerms)
+  app.innerHTML = legalProduct ? legalPage(localizedProduct(legalProduct)) : product ? productPage(product) : home()
+  if (product && product.slug in legalTerms) {
     document.querySelector<HTMLElement>('.support')?.setAttribute('id', 'support')
     document.querySelector<HTMLElement>('.legal-terms')?.setAttribute('id', 'eula')
     const anchorLabel = currentLanguage === 'ja' ? 'このセクションへのリンク' : 'Link to this section'
@@ -640,7 +882,7 @@ function render() {
       if (!heading) continue
       const link = document.createElement('a')
       link.className = 'section-anchor'
-      link.href = anchor === 'eula' ? '#/legal/external-touch-display' : `#/product/${product.slug}#${anchor}`
+      link.href = anchor === 'eula' ? `#/legal/${product.slug}` : `#/product/${product.slug}#${anchor}`
       link.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.59 13.41a2 2 0 0 0 2.82 0l3.59-3.59a2 2 0 0 0-2.82-2.82l-1.29 1.29M13.41 10.59a2 2 0 0 0-2.82 0L7 14.18A2 2 0 0 0 9.82 17l1.29-1.29" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>'
       link.setAttribute('aria-label', anchorLabel)
       link.title = anchorLabel
@@ -655,7 +897,7 @@ function render() {
       heading.append(' ', link)
     }
   }
-  initGallery()
+  initGallery(product)
   bindLanguageSelector()
   if (anchor) document.getElementById(anchor)?.scrollIntoView({ behavior: 'instant' })
   else if (!sectionHash) window.scrollTo({ top: 0, behavior: 'instant' })
