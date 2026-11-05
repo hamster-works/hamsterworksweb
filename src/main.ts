@@ -71,6 +71,7 @@ const products: Product[] = [
       'システム要件\n1. Android：アクセシビリティサービスおよび「使用状況へのアクセス」の許可が必要\n2. iOS：iOS 26.5以降、スクリーンタイムの許可が必要。',
     ],
     privacy: '利用規約・プライバシーポリシーをご覧ください。',
+    links: '<a href="https://play.google.com/store/apps/details?id=com.antiswipe" target="_blank" rel="noreferrer">Google Play ↗</a>',
     support: 'よくある質問\n\nQ. 機種変更をしたらライセンスがなくなりました\nA. このアプリの設定から「ライセンス」にある「購入またはライセンスの復元」で復元できます。',
   },
 ]
